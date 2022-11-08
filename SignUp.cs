@@ -26,6 +26,7 @@ namespace PRG_282_Project
 
 
         #region methods
+        // Validation method
         public void Signup()
         {
             FileHandler handler = new FileHandler();
