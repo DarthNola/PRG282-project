@@ -11,3 +11,17 @@ C:\Users\georg\Source\Repos\DarthNola\PRG282-project\obj\Debug\PRG 282 Project.c
 C:\Users\georg\Source\Repos\DarthNola\PRG282-project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
 C:\Users\georg\Source\Repos\DarthNola\PRG282-project\obj\Debug\PRG 282 Project.exe
 C:\Users\georg\Source\Repos\DarthNola\PRG282-project\obj\Debug\PRG 282 Project.pdb
+C:\PRG282-project\bin\Debug\PRG 282 Project.exe.config
+C:\PRG282-project\bin\Debug\PRG 282 Project.exe
+C:\PRG282-project\bin\Debug\PRG 282 Project.pdb
+C:\PRG282-project\obj\Debug\PRG 282 Project.csproj.AssemblyReference.cache
+C:\PRG282-project\obj\Debug\PRG 282 Project.csproj.SuggestedBindingRedirects.cache
+C:\PRG282-project\obj\Debug\PRG_282_Project.Login.resources
+C:\PRG282-project\obj\Debug\PRG_282_Project.Menu.resources
+C:\PRG282-project\obj\Debug\PRG_282_Project.Properties.Resources.resources
+C:\PRG282-project\obj\Debug\PRG_282_Project.SignUp.resources
+C:\PRG282-project\obj\Debug\PRG_282_Project.StudentForm.resources
+C:\PRG282-project\obj\Debug\PRG 282 Project.csproj.GenerateResource.cache
+C:\PRG282-project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
+C:\PRG282-project\obj\Debug\PRG 282 Project.exe
+C:\PRG282-project\obj\Debug\PRG 282 Project.pdb
