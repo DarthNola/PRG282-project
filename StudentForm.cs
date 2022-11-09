@@ -32,9 +32,9 @@ namespace PRG_282_Project
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
+           pictureBox1.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
            dataGridView1.DataSource =  handler.readData();
-           dataGridView1.ClearSelection();
+           dataGridView1.ClearSelection();            
         }
 
         private void GetInfo(object sender, DataGridViewCellEventArgs e)
@@ -88,9 +88,26 @@ namespace PRG_282_Project
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO STUDENTS values (" + txtID.Text + ", '" + txtName.Text + "', '" + txtSurname.Text + "'," + "NULL" + ", '" + txtDOB.Text + "', '" + txtGender.Text + "', '" + txtPhone.Text + "', '" + txtAddress.Text + "', '" + txtModule.Text + "')";
-            handler.DML_procedures(query);
-            dataGridView1.DataSource = handler.readData();
+            try
+            {
+                if (txtID.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtGender.Text == "" || txtPhone.Text == "" || txtAddress.Text == "" || txtModule.Text == "")
+                {
+                    MessageBox.Show("Please fill in all textboxes!");
+                }
+                else
+                {
+                    string query = "INSERT INTO STUDENTS values (" + txtID.Text + ", '" + txtName.Text + "', '" + txtSurname.Text + "'," + "NULL" + ", '" + txtDOB.Value + "', '" + txtGender.Text + "', '" + txtPhone.Text + "', '" + txtAddress.Text + "', '" + txtModule.Text + "')";
+                    handler.DML_procedures(query);
+                    dataGridView1.DataSource = handler.readData();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                handler.CloseConnection();
+            }
+            
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -98,7 +115,7 @@ namespace PRG_282_Project
             if (MessageBox.Show("Do you want to Update item", "Update Row", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 int index = dataGridView1.CurrentRow.Index;
-                string query = "UPDATE STUDENTS \n SET  Name= '" + txtName.Text + "', Surname= '" + txtSurname.Text + "', ST_Image= " + "NULL" + ", DOB= '" + txtDOB.Text + "', Gender= '" + txtGender.Text + "', Phone= '" + txtPhone.Text + "', Student_Address= '" + txtAddress.Text + "', Module_Code= '" + txtModule.Text + "' \n WHERE StudentID = " + txtID.Text;
+                string query = "UPDATE STUDENTS \n SET  Name= '" + txtName.Text + "', Surname= '" + txtSurname.Text + "', ST_Image= " + "NULL" + ", DOB= '" + txtDOB.Value + "', Gender= '" + txtGender.Text + "', Phone= '" + txtPhone.Text + "', Student_Address= '" + txtAddress.Text + "', Module_Code= '" + txtModule.Text + "' \n WHERE StudentID = " + txtID.Text;
                 handler.DML_procedures(query);
                 dataGridView1.DataSource = handler.readData();
             }
@@ -111,6 +128,7 @@ namespace PRG_282_Project
                 dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
                 string query = "DELETE FROM STUDENTS WHERE StudentID = " + txtID.Text;
                 handler.DML_procedures(query);
+                dvgRead();
             }
         }
 

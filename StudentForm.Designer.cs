@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -40,9 +41,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtModule = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +57,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblMenuWeb = new System.Windows.Forms.Label();
+            this.txtDOB = new System.Windows.Forms.DateTimePicker();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,11 +160,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gold;
+            this.groupBox2.Controls.Add(this.txtPhone);
+            this.groupBox2.Controls.Add(this.txtDOB);
             this.groupBox2.Controls.Add(this.txtModule);
             this.groupBox2.Controls.Add(this.txtAddress);
-            this.groupBox2.Controls.Add(this.txtPhone);
             this.groupBox2.Controls.Add(this.txtGender);
-            this.groupBox2.Controls.Add(this.txtDOB);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
@@ -178,24 +180,17 @@
             // 
             // txtModule
             // 
-            this.txtModule.Location = new System.Drawing.Point(423, 137);
+            this.txtModule.Location = new System.Drawing.Point(423, 165);
             this.txtModule.Name = "txtModule";
             this.txtModule.Size = new System.Drawing.Size(131, 20);
             this.txtModule.TabIndex = 1;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(423, 75);
+            this.txtAddress.Location = new System.Drawing.Point(423, 103);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(131, 20);
             this.txtAddress.TabIndex = 1;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(121, 165);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(131, 20);
-            this.txtPhone.TabIndex = 1;
             // 
             // txtGender
             // 
@@ -204,18 +199,11 @@
             this.txtGender.Size = new System.Drawing.Size(131, 20);
             this.txtGender.TabIndex = 1;
             // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(121, 47);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(131, 20);
-            this.txtDOB.TabIndex = 1;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(296, 75);
+            this.label7.Location = new System.Drawing.Point(296, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.TabIndex = 0;
@@ -225,7 +213,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(296, 137);
+            this.label8.Location = new System.Drawing.Point(296, 165);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 20);
             this.label8.TabIndex = 0;
@@ -368,6 +356,26 @@
             this.lblMenuWeb.Text = "www.belgiumcampus.ac.za";
             this.lblMenuWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // txtDOB
+            // 
+            this.txtDOB.Location = new System.Drawing.Point(121, 49);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(201, 20);
+            this.txtDOB.TabIndex = 2;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(117, 163);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(135, 20);
+            this.txtPhone.TabIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,9 +425,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtModule;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtGender;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -435,5 +441,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblMenuWeb;
+        private System.Windows.Forms.DateTimePicker txtDOB;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

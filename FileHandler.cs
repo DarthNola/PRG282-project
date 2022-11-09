@@ -86,6 +86,11 @@ namespace PRG_282_Project
             return source;
         }
 
+        public void CloseConnection()
+        {
+            con.Close();
+        }
+
         public DataSet searchStudents(string query)
         {
             string qry = query;
