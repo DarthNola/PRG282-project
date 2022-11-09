@@ -34,10 +34,11 @@ namespace PRG_282_Project
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-           picBoxStudentForm.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
+           picBoxStudentForm.Image = Image.FromFile("C:\\Users\\Vuyo\\Documents\\GitHub\\PRG282-project\\images\\Logo.png");            
            dataGridView1.DataSource =  handler.readData();
            dataGridView1.ClearSelection();
            dataGridView1.AutoResizeRows();
+            dataGridView1.AutoResizeColumns();
         }
 
         private void GetInfo(object sender, DataGridViewCellEventArgs e)
@@ -121,7 +122,7 @@ namespace PRG_282_Project
             if (MessageBox.Show("Do you want to Update item", "Update Row", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 int index = dataGridView1.CurrentRow.Index;
-                string query = "UPDATE STUDENTS \n SET  Name= '" + txtName.Text + "', Surname= '" + txtSurname.Text + "', ST_Image= " + "NULL" + ", DOB= '" + txtDOB.Value + "', Gender= '" + txtGender.Text + "', Phone= '" + txtPhone.Text + "', Student_Address= '" + txtAddress.Text + "', Module_Code= '" + txtModule.Text + "' \n WHERE StudentID = " + txtID.Text;
+                string query = "UPDATE STUDENTS \n SET  Name= '" + txtName.Text + "', Surname= '" + txtSurname.Text + "', DOB= '" + txtDOB.Value + "', Gender= '" + txtGender.Text + "', Phone= '" + txtPhone.Text + "', Student_Address= '" + txtAddress.Text + "', Module_Code= '" + txtModule.Text + "' \n WHERE StudentID = " + txtID.Text;
                 handler.DML_procedures(query);
                 dataGridView1.DataSource = handler.readData();
             }
@@ -162,7 +163,7 @@ namespace PRG_282_Project
             BinaryReader br = new BinaryReader(fstream);
             imageBt = br.ReadBytes((int)fstream.Length);
 
-            string constring = "Server = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true";
+            string constring = "Server = DESKTOP-TM0DEKN; Initial Catalog = Student_Details; Integrated Security = true";
             string qry = @"UPDATE STUDENTS SET ST_Image =" + "@IMG \n WHERE StudentID= " + txtID.Text;
             SqlConnection connection = new SqlConnection(constring);
             SqlCommand cmd = new SqlCommand(qry, connection);
