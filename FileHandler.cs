@@ -17,6 +17,7 @@ namespace PRG_282_Project
 {
     internal class FileHandler
     {
+        //Created path for text file 
         string filePath = @"C:\PRG282-project\bin\Debug\LoginDetail.txt";
         SqlConnection con = new SqlConnection("Server = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true;");
         public bool Read()
