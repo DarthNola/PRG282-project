@@ -47,11 +47,13 @@
             this.btnModuleForm.BackColor = System.Drawing.Color.Maroon;
             this.btnModuleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModuleForm.ForeColor = System.Drawing.Color.White;
-            this.btnModuleForm.Location = new System.Drawing.Point(64, 205);
+            this.btnModuleForm.Image = ((System.Drawing.Image)(resources.GetObject("btnModuleForm.Image")));
+            this.btnModuleForm.Location = new System.Drawing.Point(64, 192);
             this.btnModuleForm.Name = "btnModuleForm";
-            this.btnModuleForm.Size = new System.Drawing.Size(419, 46);
+            this.btnModuleForm.Size = new System.Drawing.Size(419, 55);
             this.btnModuleForm.TabIndex = 1;
             this.btnModuleForm.Text = "Module";
+            this.btnModuleForm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnModuleForm.UseVisualStyleBackColor = false;
             // 
             // btnExit
@@ -59,11 +61,14 @@
             this.btnExit.BackColor = System.Drawing.Color.Maroon;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(64, 282);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExit.Location = new System.Drawing.Point(64, 272);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(419, 44);
+            this.btnExit.Size = new System.Drawing.Size(419, 56);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit ";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -120,11 +125,14 @@
             this.btnStudentForm.BackColor = System.Drawing.Color.Maroon;
             this.btnStudentForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnStudentForm.ForeColor = System.Drawing.Color.White;
-            this.btnStudentForm.Location = new System.Drawing.Point(64, 132);
+            this.btnStudentForm.Image = ((System.Drawing.Image)(resources.GetObject("btnStudentForm.Image")));
+            this.btnStudentForm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStudentForm.Location = new System.Drawing.Point(64, 116);
             this.btnStudentForm.Name = "btnStudentForm";
-            this.btnStudentForm.Size = new System.Drawing.Size(417, 46);
+            this.btnStudentForm.Size = new System.Drawing.Size(417, 57);
             this.btnStudentForm.TabIndex = 8;
             this.btnStudentForm.Text = "Student";
+            this.btnStudentForm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStudentForm.UseVisualStyleBackColor = false;
             this.btnStudentForm.Click += new System.EventHandler(this.btnStudentForm_Click);
             // 
