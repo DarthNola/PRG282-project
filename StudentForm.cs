@@ -32,7 +32,7 @@ namespace PRG_282_Project
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-           pictureBox1.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
+           picBoxStudentForm.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
            dataGridView1.DataSource =  handler.readData();
            dataGridView1.ClearSelection();            
         }

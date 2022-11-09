@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btnModuleForm = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -36,7 +37,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
             this.btnStudentForm = new System.Windows.Forms.Button();
+            this.picBoxMenu = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModuleForm
@@ -44,7 +47,7 @@
             this.btnModuleForm.BackColor = System.Drawing.Color.Maroon;
             this.btnModuleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModuleForm.ForeColor = System.Drawing.Color.White;
-            this.btnModuleForm.Location = new System.Drawing.Point(64, 154);
+            this.btnModuleForm.Location = new System.Drawing.Point(64, 205);
             this.btnModuleForm.Name = "btnModuleForm";
             this.btnModuleForm.Size = new System.Drawing.Size(419, 46);
             this.btnModuleForm.TabIndex = 1;
@@ -56,7 +59,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Maroon;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(64, 233);
+            this.btnExit.Location = new System.Drawing.Point(64, 282);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(419, 44);
             this.btnExit.TabIndex = 2;
@@ -68,9 +71,9 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.lblMenuWeb);
-            this.panel1.Location = new System.Drawing.Point(-1, 333);
+            this.panel1.Location = new System.Drawing.Point(-1, 373);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(549, 37);
+            this.panel1.Size = new System.Drawing.Size(552, 39);
             this.panel1.TabIndex = 3;
             // 
             // lblMenuWeb
@@ -88,24 +91,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Location = new System.Drawing.Point(-1, 323);
+            this.panel2.Location = new System.Drawing.Point(-1, 364);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(549, 17);
+            this.panel2.Size = new System.Drawing.Size(552, 19);
             this.panel2.TabIndex = 4;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gold;
-            this.panel3.Location = new System.Drawing.Point(2, 313);
+            this.panel3.Location = new System.Drawing.Point(-1, 350);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(546, 14);
+            this.panel3.Size = new System.Drawing.Size(549, 17);
             this.panel3.TabIndex = 5;
             // 
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
             this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.Location = new System.Drawing.Point(237, 24);
+            this.lblMenu.Location = new System.Drawing.Point(241, 48);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(63, 24);
             this.lblMenu.TabIndex = 7;
@@ -117,7 +120,7 @@
             this.btnStudentForm.BackColor = System.Drawing.Color.Maroon;
             this.btnStudentForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnStudentForm.ForeColor = System.Drawing.Color.White;
-            this.btnStudentForm.Location = new System.Drawing.Point(66, 74);
+            this.btnStudentForm.Location = new System.Drawing.Point(64, 132);
             this.btnStudentForm.Name = "btnStudentForm";
             this.btnStudentForm.Size = new System.Drawing.Size(417, 46);
             this.btnStudentForm.TabIndex = 8;
@@ -125,11 +128,21 @@
             this.btnStudentForm.UseVisualStyleBackColor = false;
             this.btnStudentForm.Click += new System.EventHandler(this.btnStudentForm_Click);
             // 
+            // picBoxMenu
+            // 
+            this.picBoxMenu.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMenu.Image")));
+            this.picBoxMenu.Location = new System.Drawing.Point(12, 12);
+            this.picBoxMenu.Name = "picBoxMenu";
+            this.picBoxMenu.Size = new System.Drawing.Size(102, 60);
+            this.picBoxMenu.TabIndex = 9;
+            this.picBoxMenu.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 370);
+            this.ClientSize = new System.Drawing.Size(547, 413);
+            this.Controls.Add(this.picBoxMenu);
             this.Controls.Add(this.btnStudentForm);
             this.Controls.Add(this.lblMenu);
             this.Controls.Add(this.panel3);
@@ -142,6 +155,7 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +170,6 @@
         private System.Windows.Forms.Label lblMenuWeb;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Button btnStudentForm;
+        private System.Windows.Forms.PictureBox picBoxMenu;
     }
 }
