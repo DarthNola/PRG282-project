@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PRG_282_Project
 {
@@ -17,6 +18,7 @@ namespace PRG_282_Project
         public StudentForm()
         {
             InitializeComponent();
+            
         }
         public void dvgRead()
         {
@@ -34,7 +36,8 @@ namespace PRG_282_Project
         {
            picBoxStudentForm.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
            dataGridView1.DataSource =  handler.readData();
-           dataGridView1.ClearSelection();            
+           dataGridView1.ClearSelection();
+           dataGridView1.AutoResizeRows();
         }
 
         private void GetInfo(object sender, DataGridViewCellEventArgs e)
@@ -77,6 +80,7 @@ namespace PRG_282_Project
                 
                 
             }
+            dataGridView1.AutoResizeRows();
         }
 
         private void Key_Up_Search(object sender, KeyEventArgs e)
@@ -84,6 +88,7 @@ namespace PRG_282_Project
             dataGridView1.DataSource = handler.readData();
             dvgRead();
             dataGridView1.ClearSelection();
+            dataGridView1.AutoResizeRows();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -106,8 +111,9 @@ namespace PRG_282_Project
                 MessageBox.Show(ex.Message);
                 handler.CloseConnection();
             }
-            
-            
+            dataGridView1.AutoResizeRows();
+
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -119,6 +125,7 @@ namespace PRG_282_Project
                 handler.DML_procedures(query);
                 dataGridView1.DataSource = handler.readData();
             }
+            dataGridView1.AutoResizeRows();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -130,6 +137,7 @@ namespace PRG_282_Project
                 handler.DML_procedures(query);
                 dvgRead();
             }
+            dataGridView1.AutoResizeRows();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -137,6 +145,54 @@ namespace PRG_282_Project
             Menu main = new Menu();
             main.Show();
             this.Hide();
+        }
+
+        private void btnLoadImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string picPath = dlg.FileName.ToString();
+                txtImagePath.Text = picPath;
+            }
+
+            byte[] imageBt = null;
+            FileStream fstream = new FileStream(txtImagePath.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fstream);
+            imageBt = br.ReadBytes((int)fstream.Length);
+
+            string constring = "Server = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true";
+            string qry = @"UPDATE STUDENTS SET ST_Image =" + "@IMG \n WHERE StudentID= " + txtID.Text;
+            SqlConnection connection = new SqlConnection(constring);
+            SqlCommand cmd = new SqlCommand(qry, connection);
+            SqlDataReader reader;
+            if(txtID.Text != "")
+            {
+                try
+                {
+                    connection.Open();
+                    cmd.Parameters.Add(new SqlParameter("@IMG", imageBt));
+                    reader = cmd.ExecuteReader();
+                    MessageBox.Show("Inserted image");
+                    connection.Close();
+                    txtImagePath.Text = "";
+                    dataGridView1.DataSource = handler.readData();                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a item in Data Grid");
+            }
+            dataGridView1.AutoResizeRows();
+
+
+
+
         }
     }
 }

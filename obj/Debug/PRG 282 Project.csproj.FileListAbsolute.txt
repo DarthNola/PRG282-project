@@ -53,3 +53,13 @@ C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.G
 C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
 C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.exe
 C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.pdb
+C:\PRG282-project\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\PRG282-project\bin\Debug\System.Security.AccessControl.dll
+C:\PRG282-project\bin\Debug\System.Security.Permissions.dll
+C:\PRG282-project\bin\Debug\System.Security.Principal.Windows.dll
+C:\PRG282-project\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\PRG282-project\bin\Debug\System.Security.AccessControl.xml
+C:\PRG282-project\bin\Debug\System.Security.Permissions.xml
+C:\PRG282-project\bin\Debug\System.Security.Principal.Windows.xml
+C:\PRG282-project\obj\Debug\PRG_282_Project.ModuleForm.resources
+C:\PRG282-project\obj\Debug\PRG 282 Project.csproj.CopyComplete

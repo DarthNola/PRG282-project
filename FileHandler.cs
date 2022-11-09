@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -19,7 +20,7 @@ namespace PRG_282_Project
     {
         //Created path for text file 
         string filePath = @"LoginDetail.txt";
-        SqlConnection con = new SqlConnection("Server = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true;");
+        SqlConnection con = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true;");
         public bool Read()
         {
             bool flag = false;
@@ -109,5 +110,6 @@ namespace PRG_282_Project
             cmd.ExecuteNonQuery();
             con.Close();
         }
+       
     }
 }
