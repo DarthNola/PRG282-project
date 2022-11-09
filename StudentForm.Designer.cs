@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -39,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.txtDOB = new System.Windows.Forms.DateTimePicker();
             this.txtModule = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
@@ -57,8 +60,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblMenuWeb = new System.Windows.Forms.Label();
-            this.txtDOB = new System.Windows.Forms.DateTimePicker();
-            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -70,13 +71,14 @@
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.Color.Maroon;
+            this.btnReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReturn.BackgroundImage")));
+            this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnReturn.ForeColor = System.Drawing.Color.White;
             this.btnReturn.Location = new System.Drawing.Point(1261, 12);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(98, 39);
             this.btnReturn.TabIndex = 0;
-            this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -178,6 +180,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "More Info";
             // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(117, 163);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(135, 20);
+            this.txtPhone.TabIndex = 3;
+            // 
+            // txtDOB
+            // 
+            this.txtDOB.Location = new System.Drawing.Point(121, 49);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(201, 20);
+            this.txtDOB.TabIndex = 2;
+            // 
             // txtModule
             // 
             this.txtModule.Location = new System.Drawing.Point(423, 165);
@@ -262,13 +279,14 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Maroon;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(35, 325);
+            this.btnSearch.Location = new System.Drawing.Point(5, 338);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(98, 60);
+            this.btnSearch.Size = new System.Drawing.Size(57, 43);
             this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Search Student";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -313,9 +331,9 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 405);
+            this.txtSearch.Location = new System.Drawing.Point(68, 347);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(148, 20);
+            this.txtSearch.Size = new System.Drawing.Size(122, 20);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Key_Up_Search);
             // 
@@ -355,21 +373,6 @@
             this.lblMenuWeb.TabIndex = 1;
             this.lblMenuWeb.Text = "www.belgiumcampus.ac.za";
             this.lblMenuWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(121, 49);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(201, 20);
-            this.txtDOB.TabIndex = 2;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(117, 163);
-            this.txtPhone.Mask = "(999) 000-0000";
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(135, 20);
-            this.txtPhone.TabIndex = 3;
             // 
             // contextMenuStrip1
             // 
