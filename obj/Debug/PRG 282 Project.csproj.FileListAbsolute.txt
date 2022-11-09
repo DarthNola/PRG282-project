@@ -39,3 +39,17 @@ C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\o
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.exe
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.pdb
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\bin\Debug\PRG 282 Project.exe.config
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\bin\Debug\PRG 282 Project.exe
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\bin\Debug\PRG 282 Project.pdb
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.AssemblyReference.cache
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.Login.resources
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.Menu.resources
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.Properties.Resources.resources
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.SignUp.resources
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.StudentForm.resources
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.GenerateResource.cache
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.exe
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.pdb
