@@ -26,7 +26,7 @@ namespace PRG_282_Project
             FileHandler fileHandler = new FileHandler();           
             if(fileHandler.Read())
             {
-                MessageBox.Show("Login Sucessfull");
+                MessageBox.Show("Login Successful");
                 main.Show();
                 this.Hide();             
             }
