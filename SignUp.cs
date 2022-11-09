@@ -20,7 +20,15 @@ namespace PRG_282_Project
         List<string> signUpList = new List<string>();
         private void SignUpbtn_click(object sender, EventArgs e)
         {
-            Signup();
+            if(txtUsername.Text == "" || txtPassword.Text == "" || txtConfirm.Text == "")
+            {
+                MessageBox.Show("Fill in all the fields!");
+            }
+            else
+            {
+                Signup();
+            }
+            
            
         }
 
@@ -30,20 +38,20 @@ namespace PRG_282_Project
         public void Signup()
         {
             FileHandler handler = new FileHandler();
-            if (Confirmtb.Text == Passwordtb.Text)
+            if (txtConfirm.Text == txtPassword.Text)
             {
-                if (userNametb.Text.Contains(",") || Passwordtb.Text.Contains(',') || Confirmtb.Text.Contains(","))
+                if (txtUsername.Text.Contains(",") || txtPassword.Text.Contains(',') || txtConfirm.Text.Contains(","))
                 {
                     MessageBox.Show("Comma is not allowed in either   Username or Password");
                 }
-                else if (handler.usernamechecker(userNametb.Text, signUpList) == 1)
+                else if (handler.usernamechecker(txtUsername.Text, signUpList) == 1)
                 {
                     MessageBox.Show("Username taken Please try again");
                 }
                 else
                 {
 
-                    handler.write(userNametb.Text, Passwordtb.Text, signUpList);
+                    handler.write(txtUsername.Text, txtPassword.Text, signUpList);
                     Login form1 = new Login();
                     form1.ShowDialog();
                     this.Hide();
@@ -52,7 +60,7 @@ namespace PRG_282_Project
             }
             else
             {
-                MessageBox.Show("Password does is  matching");
+                MessageBox.Show("Password does not match!");
             }
 
         }

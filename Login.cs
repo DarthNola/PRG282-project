@@ -43,6 +43,7 @@ namespace PRG_282_Project
         }
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+
             SignUp signUp = new SignUp();
             signUp.ShowDialog();
             this.Hide();
