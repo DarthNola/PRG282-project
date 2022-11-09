@@ -36,13 +36,13 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblLoginWeb = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblLoginForm = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblLoginWeb = new System.Windows.Forms.Label();
+            this.picBoxLogin = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -115,6 +115,18 @@
             this.panel1.Size = new System.Drawing.Size(722, 50);
             this.panel1.TabIndex = 6;
             // 
+            // lblLoginWeb
+            // 
+            this.lblLoginWeb.AutoSize = true;
+            this.lblLoginWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginWeb.ForeColor = System.Drawing.Color.White;
+            this.lblLoginWeb.Location = new System.Drawing.Point(278, 23);
+            this.lblLoginWeb.Name = "lblLoginWeb";
+            this.lblLoginWeb.Size = new System.Drawing.Size(181, 15);
+            this.lblLoginWeb.TabIndex = 1;
+            this.lblLoginWeb.Text = "www.belgiumcampus.ac.za";
+            this.lblLoginWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
@@ -142,34 +154,22 @@
             this.lblLoginForm.Text = "Login Form ";
             this.lblLoginForm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // picBoxLogin
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(308, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 81);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblLoginWeb
-            // 
-            this.lblLoginWeb.AutoSize = true;
-            this.lblLoginWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginWeb.ForeColor = System.Drawing.Color.White;
-            this.lblLoginWeb.Location = new System.Drawing.Point(278, 23);
-            this.lblLoginWeb.Name = "lblLoginWeb";
-            this.lblLoginWeb.Size = new System.Drawing.Size(181, 15);
-            this.lblLoginWeb.TabIndex = 1;
-            this.lblLoginWeb.Text = "www.belgiumcampus.ac.za";
-            this.lblLoginWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.picBoxLogin.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogin.Image")));
+            this.picBoxLogin.Location = new System.Drawing.Point(295, 55);
+            this.picBoxLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxLogin.Name = "picBoxLogin";
+            this.picBoxLogin.Size = new System.Drawing.Size(106, 68);
+            this.picBoxLogin.TabIndex = 10;
+            this.picBoxLogin.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 391);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBoxLogin);
             this.Controls.Add(this.lblLoginForm);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -185,7 +185,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblLoginForm;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxLogin;
         private System.Windows.Forms.Label lblLoginWeb;
     }
 }

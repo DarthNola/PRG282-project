@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
             this.btnReturn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxStudentForm = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblMenuWeb = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -82,14 +82,14 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // pictureBox1
+            // picBoxStudentForm
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(-7, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picBoxStudentForm.Location = new System.Drawing.Point(-7, 1);
+            this.picBoxStudentForm.Name = "picBoxStudentForm";
+            this.picBoxStudentForm.Size = new System.Drawing.Size(142, 90);
+            this.picBoxStudentForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxStudentForm.TabIndex = 1;
+            this.picBoxStudentForm.TabStop = false;
             // 
             // groupBox1
             // 
@@ -392,7 +392,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picBoxStudentForm);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnInsert);
@@ -401,7 +401,7 @@
             this.Name = "StudentForm";
             this.Text = "StudentForm";
             this.Load += new System.EventHandler(this.StudentForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -417,7 +417,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxStudentForm;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtName;
