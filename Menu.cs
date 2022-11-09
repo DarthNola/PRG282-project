@@ -24,7 +24,11 @@ namespace PRG_282_Project
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Are you sure you want to exit the application?") == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void btnStudentForm_Click(object sender, EventArgs e)
