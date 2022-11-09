@@ -20,8 +20,18 @@ namespace PRG_282_Project
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }       
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        
+        private void btnStudentForm_Click(object sender, EventArgs e)
+        {
+            StudentForm ST_Form = new StudentForm();
+            ST_Form.Show();
+            this.Hide();
+        }
     }
 }

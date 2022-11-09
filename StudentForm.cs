@@ -31,7 +31,8 @@ namespace PRG_282_Project
         }
 
         private void StudentForm_Load(object sender, EventArgs e)
-        {            
+        {
+            pictureBox1.Image = Image.FromFile("C:\\PRG282-project\\images\\Logo.png");            
            dataGridView1.DataSource =  handler.readData();
            dataGridView1.ClearSelection();
         }
@@ -111,6 +112,13 @@ namespace PRG_282_Project
                 string query = "DELETE FROM STUDENTS WHERE StudentID = " + txtID.Text;
                 handler.DML_procedures(query);
             }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Menu main = new Menu();
+            main.Show();
+            this.Hide();
         }
     }
 }
