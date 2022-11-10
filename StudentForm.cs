@@ -60,28 +60,37 @@ namespace PRG_282_Project
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string query = "IF EXISTS (SELECT * FROM STUDENTS WHERE StudentID =" + txtSearch.Text + ") \n Begin \n SELECT * FROM STUDENTS WHERE StudentID =" + txtSearch.Text + "\n" +
-                "End \n ELSE \n SELECT 0 as StudentID, 'No record' as Name, 'No record' as Surname, NULL as ST_Image, 'No record' as DOB, 'No record' as Gender, 'No record' as Phone, 'No record' as Student_Address, 'No record' as Module_Code";
-            if (txtSearch.Text != "")
+            int number = 0;
+            if(int.TryParse(txtSearch.Text.Trim(), out number))
             {
-                dataGridView1.DataSource = handler.searchStudents(query).Tables[0];                
-                dataGridView1.ClearSelection();
-                dataGridView1.Rows[0].Selected = true;
-                foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
-                {
-                    txtID.Text = row.Cells[0].Value.ToString();
-                    txtName.Text = row.Cells[1].Value.ToString();
-                    txtSurname.Text = row.Cells[2].Value.ToString();
-                    txtDOB.Text = row.Cells[4].Value.ToString();
-                    txtGender.Text = row.Cells[5].Value.ToString();
-                    txtPhone.Text = row.Cells[6].Value.ToString();
-                    txtAddress.Text = row.Cells[7].Value.ToString();
-                    txtModule.Text = row.Cells[8].Value.ToString();
-                }
-                
-                
+                string query = "IF EXISTS (SELECT * FROM STUDENTS WHERE StudentID =" + txtSearch.Text + ") \n Begin \n SELECT * FROM STUDENTS WHERE StudentID =" + txtSearch.Text + "\n" +
+                "End \n ELSE \n SELECT null as StudentID, null as Name, null as Surname, NULL as ST_Image, null as DOB, null as Gender, null as Phone, null as Student_Address, null as Module_Code";
+                    if (txtSearch.Text != "")
+                    {
+                        dataGridView1.DataSource = handler.searchStudents(query).Tables[0];
+                        dataGridView1.ClearSelection();
+                        dataGridView1.Rows[0].Selected = true;
+                        foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
+                        {
+                            txtID.Text = row.Cells[0].Value.ToString();
+                            txtName.Text = row.Cells[1].Value.ToString();
+                            txtSurname.Text = row.Cells[2].Value.ToString();
+                            txtDOB.Text = row.Cells[4].Value.ToString();
+                            txtGender.Text = row.Cells[5].Value.ToString();
+                            txtPhone.Text = row.Cells[6].Value.ToString();
+                            txtAddress.Text = row.Cells[7].Value.ToString();
+                            txtModule.Text = row.Cells[8].Value.ToString();
+                        }
+
+                    }
+                    dataGridView1.AutoResizeRows();              
+               
             }
-            dataGridView1.AutoResizeRows();
+            else
+            {
+                MessageBox.Show("Please input valid number");
+            }
+            
         }
 
         private void Key_Up_Search(object sender, KeyEventArgs e)
@@ -190,9 +199,6 @@ namespace PRG_282_Project
                 MessageBox.Show("Please select a item in Data Grid");
             }
             dataGridView1.AutoResizeRows();
-
-
-
 
         }
     }

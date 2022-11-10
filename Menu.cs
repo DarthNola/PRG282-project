@@ -16,12 +16,10 @@ namespace PRG_282_Project
         {
             InitializeComponent();
         }
-
         private void Menu_Load(object sender, EventArgs e)
         {
 
-        }       
-
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to exit the application?","Exit Application", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -30,7 +28,6 @@ namespace PRG_282_Project
             }
             
         }
-
         private void btnStudentForm_Click(object sender, EventArgs e)
         {
             StudentForm ST_Form = new StudentForm();
