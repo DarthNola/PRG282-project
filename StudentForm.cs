@@ -34,7 +34,7 @@ namespace PRG_282_Project
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-           picBoxStudentForm.Image = Image.FromFile("C:\\Users\\Vuyo\\Documents\\GitHub\\PRG282-project\\images\\Logo.png");            
+           picBoxStudentForm.Image = Image.FromFile("Logo.png");            
            dataGridView1.DataSource =  handler.readData();
            dataGridView1.ClearSelection();
            dataGridView1.AutoResizeRows();
@@ -163,7 +163,7 @@ namespace PRG_282_Project
             BinaryReader br = new BinaryReader(fstream);
             imageBt = br.ReadBytes((int)fstream.Length);
 
-            string constring = "Server = DESKTOP-TM0DEKN; Initial Catalog = Student_Details; Integrated Security = true";
+            string constring = "Server = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true";
             string qry = @"UPDATE STUDENTS SET ST_Image =" + "@IMG \n WHERE StudentID= " + txtID.Text;
             SqlConnection connection = new SqlConnection(constring);
             SqlCommand cmd = new SqlCommand(qry, connection);
