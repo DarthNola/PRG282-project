@@ -87,9 +87,10 @@
             // 
             // picBoxStudentForm
             // 
-            this.picBoxStudentForm.Location = new System.Drawing.Point(-7, 1);
+            this.picBoxStudentForm.Image = global::PRG_282_Project.Properties.Resources.Logo;
+            this.picBoxStudentForm.Location = new System.Drawing.Point(1, 2);
             this.picBoxStudentForm.Name = "picBoxStudentForm";
-            this.picBoxStudentForm.Size = new System.Drawing.Size(142, 90);
+            this.picBoxStudentForm.Size = new System.Drawing.Size(126, 90);
             this.picBoxStudentForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxStudentForm.TabIndex = 1;
             this.picBoxStudentForm.TabStop = false;
