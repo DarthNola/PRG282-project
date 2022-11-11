@@ -5,6 +5,4 @@ rox,1,Password
 vuyo,Pass
 MEMEME,111
 Dylan,Bc123
-George ,123
-Koos,123
-Pieter,123
+
