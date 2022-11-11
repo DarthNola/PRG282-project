@@ -16,5 +16,12 @@ namespace PRG_282_Project
         {
             InitializeComponent();
         }
+
+        private void btnModuleFormReturn_Click(object sender, EventArgs e)
+        {
+            Menu Menu_Form = new Menu();
+            Menu_Form.Show();
+            this.Hide();
+        }
     }
 }
