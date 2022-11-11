@@ -38,8 +38,12 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.btnStudentForm = new System.Windows.Forms.Button();
             this.picBoxMenu = new System.Windows.Forms.PictureBox();
+            this.groupBoxLecturers = new System.Windows.Forms.GroupBox();
+            this.dataGridViewLecturers = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMenu)).BeginInit();
+            this.groupBoxLecturers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLecturers)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModuleForm
@@ -48,7 +52,7 @@
             this.btnModuleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModuleForm.ForeColor = System.Drawing.Color.White;
             this.btnModuleForm.Image = ((System.Drawing.Image)(resources.GetObject("btnModuleForm.Image")));
-            this.btnModuleForm.Location = new System.Drawing.Point(64, 192);
+            this.btnModuleForm.Location = new System.Drawing.Point(64, 190);
             this.btnModuleForm.Name = "btnModuleForm";
             this.btnModuleForm.Size = new System.Drawing.Size(419, 55);
             this.btnModuleForm.TabIndex = 1;
@@ -79,7 +83,7 @@
             this.panel1.Controls.Add(this.lblMenuWeb);
             this.panel1.Location = new System.Drawing.Point(-1, 373);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 39);
+            this.panel1.Size = new System.Drawing.Size(765, 39);
             this.panel1.TabIndex = 3;
             // 
             // lblMenuWeb
@@ -99,7 +103,7 @@
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Location = new System.Drawing.Point(-1, 364);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(552, 19);
+            this.panel2.Size = new System.Drawing.Size(765, 19);
             this.panel2.TabIndex = 4;
             // 
             // panel3
@@ -107,7 +111,7 @@
             this.panel3.BackColor = System.Drawing.Color.Gold;
             this.panel3.Location = new System.Drawing.Point(-1, 350);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(549, 17);
+            this.panel3.Size = new System.Drawing.Size(765, 17);
             this.panel3.TabIndex = 5;
             // 
             // lblMenu
@@ -128,7 +132,7 @@
             this.btnStudentForm.ForeColor = System.Drawing.Color.White;
             this.btnStudentForm.Image = ((System.Drawing.Image)(resources.GetObject("btnStudentForm.Image")));
             this.btnStudentForm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStudentForm.Location = new System.Drawing.Point(64, 116);
+            this.btnStudentForm.Location = new System.Drawing.Point(66, 99);
             this.btnStudentForm.Name = "btnStudentForm";
             this.btnStudentForm.Size = new System.Drawing.Size(417, 57);
             this.btnStudentForm.TabIndex = 8;
@@ -146,11 +150,31 @@
             this.picBoxMenu.TabIndex = 9;
             this.picBoxMenu.TabStop = false;
             // 
+            // groupBoxLecturers
+            // 
+            this.groupBoxLecturers.BackColor = System.Drawing.Color.Gold;
+            this.groupBoxLecturers.Controls.Add(this.dataGridViewLecturers);
+            this.groupBoxLecturers.Location = new System.Drawing.Point(489, 37);
+            this.groupBoxLecturers.Name = "groupBoxLecturers";
+            this.groupBoxLecturers.Size = new System.Drawing.Size(263, 291);
+            this.groupBoxLecturers.TabIndex = 10;
+            this.groupBoxLecturers.TabStop = false;
+            this.groupBoxLecturers.Text = "Lecturers";
+            // 
+            // dataGridViewLecturers
+            // 
+            this.dataGridViewLecturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLecturers.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewLecturers.Name = "dataGridViewLecturers";
+            this.dataGridViewLecturers.Size = new System.Drawing.Size(251, 266);
+            this.dataGridViewLecturers.TabIndex = 0;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 413);
+            this.ClientSize = new System.Drawing.Size(764, 413);
+            this.Controls.Add(this.groupBoxLecturers);
             this.Controls.Add(this.picBoxMenu);
             this.Controls.Add(this.btnStudentForm);
             this.Controls.Add(this.lblMenu);
@@ -165,6 +189,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMenu)).EndInit();
+            this.groupBoxLecturers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLecturers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +206,7 @@
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Button btnStudentForm;
         private System.Windows.Forms.PictureBox picBoxMenu;
+        private System.Windows.Forms.GroupBox groupBoxLecturers;
+        private System.Windows.Forms.DataGridView dataGridViewLecturers;
     }
 }
