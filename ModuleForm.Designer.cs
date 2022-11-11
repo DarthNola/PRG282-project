@@ -235,7 +235,7 @@
             this.btnModuleFormReturn.BackColor = System.Drawing.Color.Maroon;
             this.btnModuleFormReturn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModuleFormReturn.BackgroundImage")));
             this.btnModuleFormReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnModuleFormReturn.Location = new System.Drawing.Point(846, 12);
+            this.btnModuleFormReturn.Location = new System.Drawing.Point(834, 12);
             this.btnModuleFormReturn.Name = "btnModuleFormReturn";
             this.btnModuleFormReturn.Size = new System.Drawing.Size(64, 31);
             this.btnModuleFormReturn.TabIndex = 11;
