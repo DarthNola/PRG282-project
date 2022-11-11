@@ -15,6 +15,7 @@ namespace PRG_282_Project
     public partial class StudentForm : Form
     {
         FileHandler handler = new FileHandler();
+        string getStudents = @"SELECT * FROM STUDENTS";
         public StudentForm()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace PRG_282_Project
         private void StudentForm_Load(object sender, EventArgs e)
         {
            picBoxStudentForm.Image = Image.FromFile("Logo.png");            
-           dataGridView1.DataSource =  handler.readData();
+           dataGridView1.DataSource =  handler.readData(getStudents);
            dataGridView1.ClearSelection();
            dataGridView1.AutoResizeRows();
             dataGridView1.AutoResizeColumns();
@@ -95,7 +96,7 @@ namespace PRG_282_Project
 
         private void Key_Up_Search(object sender, KeyEventArgs e)
         {
-            dataGridView1.DataSource = handler.readData();
+            dataGridView1.DataSource = handler.readData(getStudents);
             dvgRead();
             dataGridView1.ClearSelection();
             dataGridView1.AutoResizeRows();
@@ -113,7 +114,7 @@ namespace PRG_282_Project
                 {
                     string query = "INSERT INTO STUDENTS values (" + txtID.Text + ", '" + txtName.Text + "', '" + txtSurname.Text + "'," + "NULL" + ", '" + txtDOB.Value + "', '" + txtGender.Text + "', '" + txtPhone.Text + "', '" + txtAddress.Text + "', '" + txtModule.Text + "')";
                     handler.DML_procedures(query);
-                    dataGridView1.DataSource = handler.readData();
+                    dataGridView1.DataSource = handler.readData(getStudents);
                 }
             }
             catch(Exception ex)
@@ -133,7 +134,7 @@ namespace PRG_282_Project
                 int index = dataGridView1.CurrentRow.Index;
                 string query = "UPDATE STUDENTS \n SET  Name= '" + txtName.Text + "', Surname= '" + txtSurname.Text + "', DOB= '" + txtDOB.Value + "', Gender= '" + txtGender.Text + "', Phone= '" + txtPhone.Text + "', Student_Address= '" + txtAddress.Text + "', Module_Code= '" + txtModule.Text + "' \n WHERE StudentID = " + txtID.Text;
                 handler.DML_procedures(query);
-                dataGridView1.DataSource = handler.readData();
+                dataGridView1.DataSource = handler.readData(getStudents);
             }
             dataGridView1.AutoResizeRows();
         }

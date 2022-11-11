@@ -18,9 +18,7 @@ namespace PRG_282_Project
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-            FileHandler handler = new FileHandler();    
-            dataGridViewLecturers.DataSource = handler.getLecutres();
-            
+
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -39,11 +37,9 @@ namespace PRG_282_Project
 
         private void btnModuleForm_Click(object sender, EventArgs e)
         {
-            ModuleForm MD_Form = new ModuleForm();
-            MD_Form.Show();
+            ModuleForm M_Form = new ModuleForm();
+            M_Form.Show();
             this.Hide();
         }
-
-        
     }
 }
