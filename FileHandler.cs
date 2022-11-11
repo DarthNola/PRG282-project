@@ -20,7 +20,7 @@ namespace PRG_282_Project
     {
         //Created path for text file 
         string filePath = @"LoginDetail.txt";
-        SqlConnection con = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true;");
+        SqlConnection con = new SqlConnection("Data Source = DESKTOP-TM0DEKN; Initial Catalog = Student_Details; Integrated Security = true;");
         public bool Read()
         {
             bool flag = false;
@@ -152,7 +152,23 @@ namespace PRG_282_Project
             dgv.AutoResizeRows();
         }
 
+        public DataTable getLecutres()
+        {
+            string query = @"SELECT Name,  Surname , Module_Name FROM Lectures FULL OUTER JOIN Codes ON Lectures.Module_Code = Codes.Module_Code;";
+            SqlDataAdapter reader = new SqlDataAdapter(query, con);
 
-       
+
+            DataTable datatable = new DataTable();
+
+            reader.Fill(datatable); 
+            return datatable;
+
+
+
+
+
+
+        }
+
     }
 }
