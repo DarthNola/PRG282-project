@@ -64,6 +64,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnLoadImage = new System.Windows.Forms.Button();
             this.txtImagePath = new System.Windows.Forms.TextBox();
+            this.lblSearchStudentID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -294,9 +295,9 @@
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(5, 338);
+            this.btnSearch.Location = new System.Drawing.Point(468, 294);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(57, 43);
+            this.btnSearch.Size = new System.Drawing.Size(41, 29);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -342,7 +343,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(68, 347);
+            this.txtSearch.Location = new System.Drawing.Point(337, 300);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(122, 20);
             this.txtSearch.TabIndex = 1;
@@ -407,12 +408,23 @@
             this.txtImagePath.Size = new System.Drawing.Size(248, 20);
             this.txtImagePath.TabIndex = 6;
             // 
+            // lblSearchStudentID
+            // 
+            this.lblSearchStudentID.AutoSize = true;
+            this.lblSearchStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchStudentID.Location = new System.Drawing.Point(196, 301);
+            this.lblSearchStudentID.Name = "lblSearchStudentID";
+            this.lblSearchStudentID.Size = new System.Drawing.Size(135, 16);
+            this.lblSearchStudentID.TabIndex = 7;
+            this.lblSearchStudentID.Text = "Search by Student ID:";
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1375, 729);
+            this.Controls.Add(this.lblSearchStudentID);
             this.Controls.Add(this.txtImagePath);
             this.Controls.Add(this.btnLoadImage);
             this.Controls.Add(this.panel3);
@@ -479,5 +491,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnLoadImage;
         private System.Windows.Forms.TextBox txtImagePath;
+        private System.Windows.Forms.Label lblSearchStudentID;
     }
 }
