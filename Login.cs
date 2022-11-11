@@ -19,7 +19,7 @@ namespace PRG_282_Project
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {            
             name = txtUsername.Text;
             pass = txtPassword.Text;
             Menu main = new Menu();
@@ -44,9 +44,9 @@ namespace PRG_282_Project
         }
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-
+           
             SignUp signUp = new SignUp();
-            signUp.ShowDialog();
+            signUp.Show();
             this.Hide();
         }
 
