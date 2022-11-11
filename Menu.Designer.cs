@@ -55,6 +55,7 @@
             this.btnModuleForm.Text = "Module";
             this.btnModuleForm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnModuleForm.UseVisualStyleBackColor = false;
+            this.btnModuleForm.Click += new System.EventHandler(this.btnModuleForm_Click);
             // 
             // btnExit
             // 
