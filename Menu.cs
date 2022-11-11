@@ -12,13 +12,15 @@ namespace PRG_282_Project
 {
     public partial class Menu : Form
     {
+        FileHandler fhandler = new FileHandler();
         public Menu()
         {
             InitializeComponent();
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            string query = @"EXEC StudentsPerLecturer";
+            dataGridViewLecturers.DataSource = fhandler.readData(query);
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
