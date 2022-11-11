@@ -67,5 +67,11 @@ namespace PRG_282_Project
         }
         #endregion
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

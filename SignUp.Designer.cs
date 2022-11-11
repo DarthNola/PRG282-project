@@ -42,6 +42,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblSignup = new System.Windows.Forms.Label();
             this.picBoxSignUp = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSignUp)).BeginInit();
             this.SuspendLayout();
@@ -176,11 +177,25 @@
             this.picBoxSignUp.TabIndex = 11;
             this.picBoxSignUp.TabStop = false;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Maroon;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(75, 280);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(104, 29);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 432);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.picBoxSignUp);
             this.Controls.Add(this.lblSignup);
             this.Controls.Add(this.panel3);
@@ -219,5 +234,6 @@
         private System.Windows.Forms.Label lblSignup;
         private System.Windows.Forms.Label lblSignupWeb;
         private System.Windows.Forms.PictureBox picBoxSignUp;
+        private System.Windows.Forms.Button btnBack;
     }
 }
