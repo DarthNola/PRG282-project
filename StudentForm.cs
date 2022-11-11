@@ -158,48 +158,8 @@ namespace PRG_282_Project
         }
 
         private void btnLoadImage_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                string picPath = dlg.FileName.ToString();
-                txtImagePath.Text = picPath;
-            }
-
-            byte[] imageBt = null;
-            FileStream fstream = new FileStream(txtImagePath.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fstream);
-            imageBt = br.ReadBytes((int)fstream.Length);
-
-            string constring = "Server = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true";
-            string qry = @"UPDATE STUDENTS SET ST_Image =" + "@IMG \n WHERE StudentID= " + txtID.Text;
-            SqlConnection connection = new SqlConnection(constring);
-            SqlCommand cmd = new SqlCommand(qry, connection);
-            SqlDataReader reader;
-            if(txtID.Text != "")
-            {
-                try
-                {
-                    connection.Open();
-                    cmd.Parameters.Add(new SqlParameter("@IMG", imageBt));
-                    reader = cmd.ExecuteReader();
-                    MessageBox.Show("Inserted image");
-                    connection.Close();
-                    txtImagePath.Text = "";
-                    dataGridView1.DataSource = handler.readData();                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a item in Data Grid");
-            }
-            dataGridView1.AutoResizeRows();
-
+        {           
+            handler.Load_Image(txtImagePath.Text, txtID.Text, this.dataGridView1);
         }
     }
 }

@@ -110,6 +110,49 @@ namespace PRG_282_Project
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public void Load_Image(string Image_Path, string ID, DataGridView dgv)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string picPath = dlg.FileName.ToString();
+                Image_Path = picPath;
+            }
+
+            byte[] imageBt = null;
+            FileStream fstream = new FileStream(Image_Path, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fstream);
+            imageBt = br.ReadBytes((int)fstream.Length);            
+            string qry = @"UPDATE STUDENTS SET ST_Image =" + "@IMG \n WHERE StudentID= " + ID;            
+            SqlCommand cmd = new SqlCommand(qry, con);
+            SqlDataReader reader;
+            if (ID != "")
+            {
+                try
+                {
+                    con.Open();
+                    cmd.Parameters.Add(new SqlParameter("@IMG", imageBt));
+                    reader = cmd.ExecuteReader();
+                    MessageBox.Show("Inserted image");
+                    con.Close();
+                    Image_Path = "";
+                    dgv.DataSource = readData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a item in Data Grid");
+            }
+            dgv.AutoResizeRows();
+        }
+
+
        
     }
 }
