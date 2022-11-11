@@ -34,5 +34,12 @@ namespace PRG_282_Project
             ST_Form.Show();
             this.Hide();
         }
+
+        private void btnModuleForm_Click(object sender, EventArgs e)
+        {
+            ModuleForm M_Form = new ModuleForm();
+            M_Form.Show();
+            this.Hide();
+        }
     }
 }

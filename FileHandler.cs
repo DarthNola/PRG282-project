@@ -76,10 +76,11 @@ namespace PRG_282_Project
                 File.WriteAllLines(filePath, mylist);
         }
 
-        public BindingSource readData()
+        public BindingSource readData(string query)
         {
+            string qry = query;
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM STUDENTS", con);
+            SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
             BindingSource source = new BindingSource();
             source.DataSource = reader;
@@ -95,20 +96,40 @@ namespace PRG_282_Project
 
         public DataSet searchStudents(string query)
         {
-            string qry = query;
-            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
             DataSet set = new DataSet();
-            adapter.Fill(set);
-            return set;
+            try
+            {
+                string qry = query;
+                SqlDataAdapter adapter = new SqlDataAdapter(query, con);                
+                adapter.Fill(set);                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return set;            
+            
         }
 
         public void DML_procedures(string query)
         {
-            string qry = query;
-            SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                string qry = query;
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            
         }
 
         public void Load_Image(string Image_Path, string ID, DataGridView dgv)
@@ -138,7 +159,7 @@ namespace PRG_282_Project
                     MessageBox.Show("Inserted image");
                     con.Close();
                     Image_Path = "";
-                    dgv.DataSource = readData();
+                    dgv.DataSource = readData("SELECT * FROM Students");
                 }
                 catch (Exception ex)
                 {
