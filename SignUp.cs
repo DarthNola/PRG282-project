@@ -53,8 +53,9 @@ namespace PRG_282_Project
 
                     handler.write(txtUsername.Text, txtPassword.Text, signUpList);
                     Login form1 = new Login();
-                    form1.ShowDialog();
                     this.Hide();
+                    form1.ShowDialog();
+                   
                 }
 
             }
