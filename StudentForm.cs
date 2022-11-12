@@ -39,7 +39,7 @@ namespace PRG_282_Project
            dataGridView1.DataSource =  handler.readData(getStudents);
            dataGridView1.ClearSelection();
            dataGridView1.AutoResizeRows();
-            dataGridView1.AutoResizeColumns();
+           dataGridView1.AutoResizeColumns();
         }
 
         private void GetInfo(object sender, DataGridViewCellEventArgs e)
@@ -160,7 +160,7 @@ namespace PRG_282_Project
 
         private void btnLoadImage_Click(object sender, EventArgs e)
         {           
-            handler.Load_Image(txtImagePath.Text, txtID.Text, this.dataGridView1);
+            handler.Load_Image(txtID.Text, this.dataGridView1);
         }
     }
 }

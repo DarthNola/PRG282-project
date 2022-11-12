@@ -20,8 +20,7 @@ namespace PRG_282_Project
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
             BindingSource source = new BindingSource();
-            source.DataSource = reader;
-            //dataGridView1.DataSource = source;
+            source.DataSource = reader;            
             con.Close();
             return source;
         }
@@ -66,11 +65,11 @@ namespace PRG_282_Project
                 con.Close();
             }
 
-
         }
 
-        public void Load_Image(string Image_Path, string ID, DataGridView dgv)
+        public void Load_Image(string ID, DataGridView dgv)
         {
+            string Image_Path = "";
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "PNG Files(*.png)|*.png|All Files(*.*)|*.*";
             if (dlg.ShowDialog() == DialogResult.OK)
@@ -120,11 +119,6 @@ namespace PRG_282_Project
 
             reader.Fill(datatable);
             return datatable;
-
-
-
-
-
 
         }
     }

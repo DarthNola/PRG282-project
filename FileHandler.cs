@@ -23,9 +23,7 @@ namespace PRG_282_Project
        
         public bool Read()
         {
-            bool flag = false;
-            Login loginForm = new Login();
-            Menu mainmenu = new Menu();
+            bool flag = false;            
             try
             {
                 using (StreamReader sr = new StreamReader(filePath))
@@ -69,11 +67,10 @@ namespace PRG_282_Project
                 return similar;           
         }
         public void write(string username , string password , List<string>mylist)
-        {
-            
+        {            
             mylist = File.ReadAllLines(filePath).ToList();
-                mylist.Add(username + "," + password);
-                File.WriteAllLines(filePath, mylist);
+            mylist.Add(username + "," + password);
+            File.WriteAllLines(filePath, mylist);
         }
 
        

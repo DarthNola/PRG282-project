@@ -63,7 +63,6 @@
             this.lblMenuWeb = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnLoadImage = new System.Windows.Forms.Button();
-            this.txtImagePath = new System.Windows.Forms.TextBox();
             this.lblSearchStudentID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -196,7 +195,7 @@
             // 
             this.txtDOB.Location = new System.Drawing.Point(121, 49);
             this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(201, 20);
+            this.txtDOB.Size = new System.Drawing.Size(197, 20);
             this.txtDOB.TabIndex = 2;
             // 
             // txtModule
@@ -307,7 +306,7 @@
             this.btnInsert.BackColor = System.Drawing.Color.Maroon;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnInsert.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.Location = new System.Drawing.Point(1184, 330);
+            this.btnInsert.Location = new System.Drawing.Point(1184, 329);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(98, 51);
             this.btnInsert.TabIndex = 0;
@@ -320,7 +319,7 @@
             this.btnRemove.BackColor = System.Drawing.Color.Maroon;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(1184, 405);
+            this.btnRemove.Location = new System.Drawing.Point(1184, 386);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(98, 52);
             this.btnRemove.TabIndex = 0;
@@ -333,7 +332,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Maroon;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(1184, 480);
+            this.btnUpdate.Location = new System.Drawing.Point(1184, 444);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(98, 52);
             this.btnUpdate.TabIndex = 0;
@@ -393,22 +392,16 @@
             // 
             // btnLoadImage
             // 
-            this.btnLoadImage.Location = new System.Drawing.Point(1045, 589);
+            this.btnLoadImage.BackColor = System.Drawing.Color.Maroon;
+            this.btnLoadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLoadImage.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLoadImage.Location = new System.Drawing.Point(1184, 502);
             this.btnLoadImage.Name = "btnLoadImage";
-            this.btnLoadImage.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadImage.Size = new System.Drawing.Size(98, 48);
             this.btnLoadImage.TabIndex = 5;
             this.btnLoadImage.Text = "Load Image";
-            this.btnLoadImage.UseVisualStyleBackColor = true;
+            this.btnLoadImage.UseVisualStyleBackColor = false;
             this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
-            // 
-            // txtImagePath
-            // 
-            this.txtImagePath.Enabled = false;
-            this.txtImagePath.Location = new System.Drawing.Point(946, 591);
-            this.txtImagePath.Name = "txtImagePath";
-            this.txtImagePath.Size = new System.Drawing.Size(81, 20);
-            this.txtImagePath.TabIndex = 6;
-            this.txtImagePath.Visible = false;
             // 
             // lblSearchStudentID
             // 
@@ -427,7 +420,6 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1375, 729);
             this.Controls.Add(this.lblSearchStudentID);
-            this.Controls.Add(this.txtImagePath);
             this.Controls.Add(this.btnLoadImage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -492,7 +484,6 @@
         private System.Windows.Forms.MaskedTextBox txtPhone;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnLoadImage;
-        private System.Windows.Forms.TextBox txtImagePath;
         private System.Windows.Forms.Label lblSearchStudentID;
     }
 }
