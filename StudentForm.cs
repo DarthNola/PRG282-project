@@ -14,7 +14,7 @@ namespace PRG_282_Project
 {
     public partial class StudentForm : Form
     {
-        FileHandler handler = new FileHandler();
+        DataHandler handler = new DataHandler();
         string getStudents = @"SELECT * FROM STUDENTS";
         public StudentForm()
         {

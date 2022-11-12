@@ -12,7 +12,7 @@ namespace PRG_282_Project
 {
     public partial class Menu : Form
     {
-        FileHandler fhandler = new FileHandler();
+        DataHandler handler = new DataHandler();
         public Menu()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace PRG_282_Project
         private void Menu_Load(object sender, EventArgs e)
         {
             string query = @"EXEC StudentsPerLecturer";
-            dataGridViewLecturers.DataSource = fhandler.readData(query);
+            dataGridViewLecturers.DataSource = handler.readData(query);
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

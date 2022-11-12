@@ -13,7 +13,7 @@ namespace PRG_282_Project
 {
     public partial class ModuleForm : Form
     {
-        FileHandler handler = new FileHandler();
+        DataHandler handler = new DataHandler();
         string getModules = @"SELECT * FROM Codes";
         public ModuleForm()
         {
