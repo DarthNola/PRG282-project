@@ -45,7 +45,6 @@
             this.txtDOB = new System.Windows.Forms.DateTimePicker();
             this.txtModule = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnLoadImage = new System.Windows.Forms.Button();
             this.lblSearchStudentID = new System.Windows.Forms.Label();
+            this.txtGender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -165,11 +165,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gold;
+            this.groupBox2.Controls.Add(this.txtGender);
             this.groupBox2.Controls.Add(this.txtPhone);
             this.groupBox2.Controls.Add(this.txtDOB);
             this.groupBox2.Controls.Add(this.txtModule);
             this.groupBox2.Controls.Add(this.txtAddress);
-            this.groupBox2.Controls.Add(this.txtGender);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
@@ -211,13 +211,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(131, 20);
             this.txtAddress.TabIndex = 1;
-            // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(121, 104);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(131, 20);
-            this.txtGender.TabIndex = 1;
             // 
             // label7
             // 
@@ -413,6 +406,17 @@
             this.lblSearchStudentID.TabIndex = 7;
             this.lblSearchStudentID.Text = "Search by Student ID:";
             // 
+            // txtGender
+            // 
+            this.txtGender.FormattingEnabled = true;
+            this.txtGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.txtGender.Location = new System.Drawing.Point(117, 104);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(131, 21);
+            this.txtGender.TabIndex = 4;
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,7 +468,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtModule;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -485,5 +488,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnLoadImage;
         private System.Windows.Forms.Label lblSearchStudentID;
+        private System.Windows.Forms.ComboBox txtGender;
     }
 }

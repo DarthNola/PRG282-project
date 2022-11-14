@@ -63,3 +63,9 @@ LEFT JOIN STUDENTS
 ON Lectures.Class_Module = STUDENTS.Module_Code
 Group By Lectures.EmpID, Lectures.Name, Lectures.Surname, Lectures.Class_Module;
 END
+GO
+CREATE PROCEDURE spModules
+AS
+BEGIN
+SELECT Module_Code FROM Codes;
+END;
