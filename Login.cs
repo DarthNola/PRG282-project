@@ -12,8 +12,10 @@ namespace PRG_282_Project
 {
     public partial class Login : Form
     {
-        //Varibles declared to be used with the write() method 
+        //Variables declared to be used with the write() method 
         public static string name, pass;
+        //Instance of the FileHandler class is created 
+        FileHandler fileHandler = new FileHandler();
         public Login()
         {
             InitializeComponent();
@@ -24,8 +26,7 @@ namespace PRG_282_Project
             //Two variables are declared that receives the values entered into the textboxes 
             name = txtUsername.Text;
             pass = txtPassword.Text;
-            Menu main = new Menu();
-            FileHandler fileHandler = new FileHandler();     
+            Menu main = new Menu();             
             //If statement evaluates whether the method is true or false
             if(fileHandler.Read())
             { 
