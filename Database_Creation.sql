@@ -46,13 +46,13 @@ INSERT INTO STUDENTS (StudentID, Name, Surname, DOB, Gender, Phone, Student_Addr
 Go
 INSERT INTO Lectures values(1, 'Alfred', 'Mazorodse', 'PRG282');
 INSERT INTO Lectures values(2, 'Andries', 'Welgemoed', 'MAT282');
-INSERT INTO Lectures values(3, 'Evange', 'Elize', 'LPR82');
+INSERT INTO Lectures values(3, 'Evange', 'Elize', 'DBD282');
 INSERT INTO Lectures values(4, 'Jan', 'Mentz', 'PRG281');
 INSERT INTO Lectures values(5, 'Jan', 'Goffing', 'INF282');
 INSERT INTO Lectures values(6, 'Robert', 'Rodgers', 'STA282');
 INSERT INTO Lectures values(7, 'Mpho', 'Matloga', 'WPR282');
 INSERT INTO Lectures values(8, 'Skalie', 'Pretorious', 'PMM282');
-INSERT INTO Lectures values(9, 'Bob', 'Swannepoel', 'IOT282');
+INSERT INTO Lectures values(9, 'Bob', 'Swannepoel', 'INF282');
 GO
 CREATE PROCEDURE StudentsPerLecturer
 AS
