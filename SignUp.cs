@@ -69,9 +69,12 @@ namespace PRG_282_Project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            if(MessageBox.Show("Go back to Login? Note all information entered will not be saved!","Back to login",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                login.Show();
+                this.Hide();
+            }          
         }
     }
 }
