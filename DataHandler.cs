@@ -117,17 +117,6 @@ namespace PRG_282_Project
             dgv.AutoResizeRows();
         }
 
-        public DataTable getLecutres()
-        {
-            string query = @"SELECT Name,  Surname , Module_Name FROM Lectures FULL OUTER JOIN Codes ON Lectures.Module_Code = Codes.Module_Code;";
-            SqlDataAdapter reader = new SqlDataAdapter(query, con);
-
-
-            DataTable datatable = new DataTable();
-
-            reader.Fill(datatable);
-            return datatable;
-
-        }
+      
     }
 }

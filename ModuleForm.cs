@@ -12,7 +12,7 @@ using System.Xml.Linq;
 namespace PRG_282_Project
 {
     public partial class ModuleForm : Form
-    {
+    {// Creating an instance to the datahandler class
         DataHandler handler = new DataHandler();
         string getModules = @"SELECT * FROM Codes";
         public ModuleForm()

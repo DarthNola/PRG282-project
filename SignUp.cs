@@ -20,6 +20,7 @@ namespace PRG_282_Project
         List<string> signUpList = new List<string>();
         private void SignUpbtn_click(object sender, EventArgs e)
         {
+            // Validaton for no null textboxes
             if(txtUsername.Text == "" || txtPassword.Text == "" || txtConfirm.Text == "")
             {
                 MessageBox.Show("Fill in all the fields!");
@@ -31,7 +32,15 @@ namespace PRG_282_Project
             
            
         }
-
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Go back to Login? Note all information entered will not be saved!", "Back to login", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                login.Show();
+                this.Hide();
+            }
+        }
 
         #region methods
         // Validation method
@@ -40,11 +49,11 @@ namespace PRG_282_Project
             FileHandler handler = new FileHandler();
             if (txtConfirm.Text == txtPassword.Text)
             {
-                if (txtUsername.Text.Contains(",") || txtPassword.Text.Contains(',') || txtConfirm.Text.Contains(","))
+                if (txtUsername.Text.Contains(",") || txtPassword.Text.Contains(',') || txtConfirm.Text.Contains(",")) // username / pasword should not contain a comma
                 {
                     MessageBox.Show("Comma is not allowed in either   Username or Password");
                 }
-                else if (handler.usernamechecker(txtUsername.Text, signUpList) == 1)
+                else if (handler.usernamechecker(txtUsername.Text, signUpList) == 1) //if thre username that is been used
                 {
                     MessageBox.Show("Username taken Please try again");
                 }
@@ -67,14 +76,6 @@ namespace PRG_282_Project
         }
         #endregion
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("Go back to Login? Note all information entered will not be saved!","Back to login",MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Login login = new Login();
-                login.Show();
-                this.Hide();
-            }          
-        }
+       
     }
 }
