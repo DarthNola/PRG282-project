@@ -41,6 +41,8 @@ namespace PRG_282_Project
             this.Hide();
         }
 
+        //Inserting a course
+
         private void btnInsertCourse_Click(object sender, EventArgs e)
         {
             try
@@ -64,6 +66,8 @@ namespace PRG_282_Project
             dataGridView1.AutoResizeColumns();
         }
 
+        //Removing a course
+
         private void btnRemoveCourse_Click(object sender, EventArgs e)
         {
             
@@ -77,6 +81,8 @@ namespace PRG_282_Project
                 dataGridView1.AutoResizeColumns();
         }
 
+        //Get items from datagridrow to textboxes
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -89,6 +95,8 @@ namespace PRG_282_Project
             }
         }
 
+        //Update a course
+
         private void btnUpdateCourse_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to Update item", "Update Row", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -100,6 +108,8 @@ namespace PRG_282_Project
             dataGridView1.AutoResizeRows();
         }
 
+        //After clearing the Search textbox, datagridview will refresh and display all data in selected table
+
         private void txtSearchCourseID_KeyUp(object sender, KeyEventArgs e)
         {
             dataGridView1.DataSource = handler.readData(getModules);
@@ -107,6 +117,8 @@ namespace PRG_282_Project
             dataGridView1.ClearSelection();
             dataGridView1.AutoResizeRows();
         }
+
+        //Search the course by ID
 
         private void btnSearchCourseID_Click(object sender, EventArgs e)
         {

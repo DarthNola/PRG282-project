@@ -13,6 +13,8 @@ namespace PRG_282_Project
     internal class DataHandler
     {
         SqlConnection con = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true;");
+
+        //Reading data from Student_Detail database
         public BindingSource readData(string query)
         {
             string qry = query;
@@ -30,6 +32,8 @@ namespace PRG_282_Project
             con.Close();
         }
 
+        //Searching for a student
+
         public DataSet searchStudents(string query)
         {
             DataSet set = new DataSet();
@@ -46,6 +50,8 @@ namespace PRG_282_Project
             return set;
 
         }
+
+        //Method for Update, Delete and Insert into Student_Details database
 
         public void DML_procedures(string query)
         {
@@ -66,6 +72,8 @@ namespace PRG_282_Project
             }
 
         }
+
+        //Loading an image into the Student_Detail database
 
         public void Load_Image(string ID, DataGridView dgv)
         {

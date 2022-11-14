@@ -42,6 +42,8 @@ namespace PRG_282_Project
            dataGridView1.AutoResizeColumns();
         }
 
+        // Items from selected dataGridView row to textboxes
+
         private void GetInfo(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -58,6 +60,8 @@ namespace PRG_282_Project
 
             }
         }
+
+        //Search student by ID
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -102,6 +106,8 @@ namespace PRG_282_Project
             dataGridView1.AutoResizeRows();
         }
 
+        //Insert a Student
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             try
@@ -127,6 +133,8 @@ namespace PRG_282_Project
 
         }
 
+        //Update a student
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to Update item", "Update Row", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -138,6 +146,8 @@ namespace PRG_282_Project
             }
             dataGridView1.AutoResizeRows();
         }
+
+        //Remove a student
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
@@ -157,6 +167,8 @@ namespace PRG_282_Project
             main.Show();
             this.Hide();
         }
+
+        // Insert an image
 
         private void btnLoadImage_Click(object sender, EventArgs e)
         {           
