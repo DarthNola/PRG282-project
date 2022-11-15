@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace PRG_282_Project
 {
-    internal class Users
+    internal class User
     {
         string username,password;
 
-        public Users()
+        public User()
         {
         }
 
-        public Users(string username, string password)
+        public User(string username, string password)
         {
             this.Username = username;
             this.Password = password;

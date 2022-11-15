@@ -27,7 +27,7 @@ namespace PRG_282_Project
         public bool Read(string username, string password)
         {
             //Creating instance of the user 
-            Users Users = new Users(username,password);
+            User Users = new User(username,password);
             //Flag is used to keep track of the condition 
             bool flag = false;
             //Try statement is executed 
