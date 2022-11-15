@@ -22,9 +22,12 @@ namespace PRG_282_Project
         //Absolute path of the text file used to read and write the username and password
         string filePath = @"LoginDetail.txt";
        
+     
         //This method reads the username and password from the text file called LoginDetail
-        public bool Read()
+        public bool Read(string username, string password)
         {
+            //Creating instance of the user 
+            Users Users = new Users(username,password);
             //Flag is used to keep track of the condition 
             bool flag = false;
             //Try statement is executed 
@@ -38,7 +41,7 @@ namespace PRG_282_Project
                     {
                         string[] field = line.Split(',');
                         //Check if the user name and password entered by the user is in the text file 
-                        if (field[0] == Login.name.Trim() && field[1] == Login.pass.Trim())
+                        if (field[0] == Users.Username.Trim() && field[1] == Users.Password.Trim())
                         {
                             flag = true;
                             break;
