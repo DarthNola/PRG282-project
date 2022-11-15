@@ -117,6 +117,21 @@ namespace PRG_282_Project
             dgv.AutoResizeRows();
         }
 
-      
+        public void getModules(ComboBox box)
+        {
+            SqlCommand cmd = new SqlCommand("spModules", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while ((reader.Read()))
+                {
+                    box.Items.Add(reader[0].ToString());
+                }
+            }
+            con.Close();
+        }
+
+
     }
 }

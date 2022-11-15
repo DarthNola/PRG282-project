@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReturn = new System.Windows.Forms.Button();
             this.picBoxStudentForm = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,9 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtGender = new System.Windows.Forms.ComboBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.txtDOB = new System.Windows.Forms.DateTimePicker();
-            this.txtModule = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnLoadImage = new System.Windows.Forms.Button();
             this.lblSearchStudentID = new System.Windows.Forms.Label();
-            this.txtGender = new System.Windows.Forms.ComboBox();
+            this.txtModule = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -165,10 +165,10 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Gold;
+            this.groupBox2.Controls.Add(this.txtModule);
             this.groupBox2.Controls.Add(this.txtGender);
             this.groupBox2.Controls.Add(this.txtPhone);
             this.groupBox2.Controls.Add(this.txtDOB);
-            this.groupBox2.Controls.Add(this.txtModule);
             this.groupBox2.Controls.Add(this.txtAddress);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
@@ -182,6 +182,17 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "More Info";
+            // 
+            // txtGender
+            // 
+            this.txtGender.FormattingEnabled = true;
+            this.txtGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.txtGender.Location = new System.Drawing.Point(117, 104);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(131, 21);
+            this.txtGender.TabIndex = 4;
             // 
             // txtPhone
             // 
@@ -197,13 +208,6 @@
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.Size = new System.Drawing.Size(197, 20);
             this.txtDOB.TabIndex = 2;
-            // 
-            // txtModule
-            // 
-            this.txtModule.Location = new System.Drawing.Point(423, 165);
-            this.txtModule.Name = "txtModule";
-            this.txtModule.Size = new System.Drawing.Size(131, 20);
-            this.txtModule.TabIndex = 1;
             // 
             // txtAddress
             // 
@@ -266,14 +270,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(196, 329);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(924, 221);
@@ -406,16 +410,13 @@
             this.lblSearchStudentID.TabIndex = 7;
             this.lblSearchStudentID.Text = "Search by Student ID:";
             // 
-            // txtGender
+            // txtModule
             // 
-            this.txtGender.FormattingEnabled = true;
-            this.txtGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.txtGender.Location = new System.Drawing.Point(117, 104);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(131, 21);
-            this.txtGender.TabIndex = 4;
+            this.txtModule.FormattingEnabled = true;
+            this.txtModule.Location = new System.Drawing.Point(423, 164);
+            this.txtModule.Name = "txtModule";
+            this.txtModule.Size = new System.Drawing.Size(130, 21);
+            this.txtModule.TabIndex = 5;
             // 
             // StudentForm
             // 
@@ -466,7 +467,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtModule;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -489,5 +489,6 @@
         private System.Windows.Forms.Button btnLoadImage;
         private System.Windows.Forms.Label lblSearchStudentID;
         private System.Windows.Forms.ComboBox txtGender;
+        private System.Windows.Forms.ComboBox txtModule;
     }
 }

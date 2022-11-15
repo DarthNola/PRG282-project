@@ -37,6 +37,7 @@ namespace PRG_282_Project
         {
            picBoxStudentForm.Image = Image.FromFile("Logo.png");            
            dataGridView1.DataSource =  handler.readData(getStudents);
+           handler.getModules(txtModule);
            dataGridView1.ClearSelection();
            dataGridView1.AutoResizeRows();
            dataGridView1.AutoResizeColumns();
