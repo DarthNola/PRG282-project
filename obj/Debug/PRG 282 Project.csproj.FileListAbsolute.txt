@@ -83,3 +83,4 @@ C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\b
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.ModuleForm.resources
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.CopyComplete
+C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.insertlectures.resources

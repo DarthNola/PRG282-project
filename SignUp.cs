@@ -21,16 +21,17 @@ namespace PRG_282_Project
         private void SignUpbtn_click(object sender, EventArgs e)
         {
             // Validaton for no null textboxes
-            if(txtUsername.Text == "" || txtPassword.Text == "" || txtConfirm.Text == "")
+            if (txtUsername.Text == "" || txtPassword.Text == "" || txtConfirm.Text == "")
             {
                 MessageBox.Show("Fill in all the fields!");
             }
             else
             {
-                Signup();
+                User user = new User();
+                user.Signup(txtUsername.Text, txtConfirm.Text, txtPassword.Text, signUpList);
             }
-            
-           
+
+
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -41,40 +42,6 @@ namespace PRG_282_Project
                 this.Hide();
             }
         }
-
-        #region methods
-        // Validation method
-        public void Signup()
-        {
-            FileHandler handler = new FileHandler();
-            if (txtConfirm.Text == txtPassword.Text)
-            {
-                if (txtUsername.Text.Contains(",") || txtPassword.Text.Contains(',') || txtConfirm.Text.Contains(",")) // username / pasword should not contain a comma
-                {
-                    MessageBox.Show("Comma is not allowed in either   Username or Password");
-                }
-                else if (handler.usernamechecker(txtUsername.Text, signUpList) == 1) //if thre username that is been used
-                {
-                    MessageBox.Show("Username taken Please try again");
-                }
-                else
-                {
-
-                    handler.write(txtUsername.Text, txtPassword.Text, signUpList);
-                    Login form1 = new Login();
-                    this.Hide();
-                    form1.ShowDialog();
-                   
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Password does not match!");
-            }
-
-        }
-        #endregion
 
        
     }

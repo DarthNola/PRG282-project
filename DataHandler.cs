@@ -12,7 +12,7 @@ namespace PRG_282_Project
 {
     internal class DataHandler
     {
-        SqlConnection con = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = Student_Details; Integrated Security = true;");
+        SqlConnection con = new SqlConnection("Data Source = DESKTOP-TM0DEKN; Initial Catalog = Student_Details; Integrated Security = true;");
 
         //Reading data from Student_Detail database
         public BindingSource readData(string query)

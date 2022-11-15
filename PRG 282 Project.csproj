@@ -82,6 +82,12 @@
   <ItemGroup>
     <Compile Include="DataHandler.cs" />
     <Compile Include="FileHandler.cs" />
+    <Compile Include="insertlectures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertlectures.designer.cs">
+      <DependentUpon>insertlectures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="insertlectures.resx">
+      <DependentUpon>insertlectures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
