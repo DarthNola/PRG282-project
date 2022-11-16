@@ -39,6 +39,7 @@
             this.txtModuleCode = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +122,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(85, 230);
+            this.btnBack.Location = new System.Drawing.Point(459, 14);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(110, 49);
             this.btnBack.TabIndex = 9;
@@ -130,7 +131,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(284, 230);
+            this.btnAdd.Location = new System.Drawing.Point(333, 230);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 49);
             this.btnAdd.TabIndex = 10;
@@ -138,11 +139,22 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(121, 230);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(107, 49);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // insertlectures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 325);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtModuleCode);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.TextBox txtModuleCode;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -70,5 +70,21 @@ namespace PRG_282_Project
                 txtModuleCode.Text = items[3];
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete item", "Remove Row", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                
+                string query = "DELETE FROM Lectures WHERE  EmpID = " + txtID.Text;
+                handler.DML_procedures(query);
+
+                Menu main = new Menu();
+                main.Show();
+                this.Hide();
+
+            }
+            
+        }
     }
 }
