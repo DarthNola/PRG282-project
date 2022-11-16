@@ -36,14 +36,14 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.lblCPass = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.BlackPanelSign = new System.Windows.Forms.Panel();
             this.lblSignupWeb = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.MaroonPanelSign = new System.Windows.Forms.Panel();
+            this.GoldPanelSign = new System.Windows.Forms.Panel();
             this.lblSignup = new System.Windows.Forms.Label();
             this.picBoxSignUp = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.BlackPanelSign.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSignUp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,14 +120,14 @@
             this.lblCPass.TabIndex = 6;
             this.lblCPass.Text = "Confirm Password:";
             // 
-            // panel1
+            // BlackPanelSign
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.lblSignupWeb);
-            this.panel1.Location = new System.Drawing.Point(0, 386);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 45);
-            this.panel1.TabIndex = 7;
+            this.BlackPanelSign.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BlackPanelSign.Controls.Add(this.lblSignupWeb);
+            this.BlackPanelSign.Location = new System.Drawing.Point(0, 386);
+            this.BlackPanelSign.Name = "BlackPanelSign";
+            this.BlackPanelSign.Size = new System.Drawing.Size(502, 45);
+            this.BlackPanelSign.TabIndex = 7;
             // 
             // lblSignupWeb
             // 
@@ -141,21 +141,21 @@
             this.lblSignupWeb.Text = "www.belgiumcampus.ac.za";
             this.lblSignupWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // panel2
+            // MaroonPanelSign
             // 
-            this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Location = new System.Drawing.Point(0, 374);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(502, 24);
-            this.panel2.TabIndex = 8;
+            this.MaroonPanelSign.BackColor = System.Drawing.Color.Maroon;
+            this.MaroonPanelSign.Location = new System.Drawing.Point(0, 374);
+            this.MaroonPanelSign.Name = "MaroonPanelSign";
+            this.MaroonPanelSign.Size = new System.Drawing.Size(502, 24);
+            this.MaroonPanelSign.TabIndex = 8;
             // 
-            // panel3
+            // GoldPanelSign
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gold;
-            this.panel3.Location = new System.Drawing.Point(0, 359);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(502, 21);
-            this.panel3.TabIndex = 9;
+            this.GoldPanelSign.BackColor = System.Drawing.Color.Gold;
+            this.GoldPanelSign.Location = new System.Drawing.Point(0, 359);
+            this.GoldPanelSign.Name = "GoldPanelSign";
+            this.GoldPanelSign.Size = new System.Drawing.Size(502, 21);
+            this.GoldPanelSign.TabIndex = 9;
             // 
             // lblSignup
             // 
@@ -198,9 +198,9 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.picBoxSignUp);
             this.Controls.Add(this.lblSignup);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.GoldPanelSign);
+            this.Controls.Add(this.MaroonPanelSign);
+            this.Controls.Add(this.BlackPanelSign);
             this.Controls.Add(this.lblCPass);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUser);
@@ -211,8 +211,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignUp";
             this.Text = "SignUp";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.BlackPanelSign.ResumeLayout(false);
+            this.BlackPanelSign.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSignUp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,9 +228,9 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblCPass;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel BlackPanelSign;
+        private System.Windows.Forms.Panel MaroonPanelSign;
+        private System.Windows.Forms.Panel GoldPanelSign;
         private System.Windows.Forms.Label lblSignup;
         private System.Windows.Forms.Label lblSignupWeb;
         private System.Windows.Forms.PictureBox picBoxSignUp;
