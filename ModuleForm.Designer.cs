@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuleForm));
             this.BlackPanelSign = new System.Windows.Forms.Panel();
-            this.lblLoginWeb = new System.Windows.Forms.Label();
+            this.lblModuleWeb = new System.Windows.Forms.Label();
             this.MaroonPanelSign = new System.Windows.Forms.Panel();
             this.GoldPanelSign = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxCourseDetails = new System.Windows.Forms.GroupBox();
             this.txtLink = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtCourseName = new System.Windows.Forms.TextBox();
@@ -50,32 +50,34 @@
             this.txtSearchCourseID = new System.Windows.Forms.TextBox();
             this.lblSearchCourseID = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.picBoxModule = new System.Windows.Forms.PictureBox();
             this.BlackPanelSign.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxCourseDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxModule)).BeginInit();
             this.SuspendLayout();
             // 
             // BlackPanelSign
             // 
             this.BlackPanelSign.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BlackPanelSign.Controls.Add(this.lblLoginWeb);
+            this.BlackPanelSign.Controls.Add(this.lblModuleWeb);
             this.BlackPanelSign.Location = new System.Drawing.Point(-1, 424);
             this.BlackPanelSign.Name = "BlackPanelSign";
             this.BlackPanelSign.Size = new System.Drawing.Size(1312, 35);
             this.BlackPanelSign.TabIndex = 0;
             // 
-            // lblLoginWeb
+            // lblModuleWeb
             // 
-            this.lblLoginWeb.AutoSize = true;
-            this.lblLoginWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginWeb.ForeColor = System.Drawing.Color.White;
-            this.lblLoginWeb.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblLoginWeb.Location = new System.Drawing.Point(592, 10);
-            this.lblLoginWeb.Name = "lblLoginWeb";
-            this.lblLoginWeb.Size = new System.Drawing.Size(181, 15);
-            this.lblLoginWeb.TabIndex = 2;
-            this.lblLoginWeb.Text = "www.belgiumcampus.ac.za";
-            this.lblLoginWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblModuleWeb.AutoSize = true;
+            this.lblModuleWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModuleWeb.ForeColor = System.Drawing.Color.White;
+            this.lblModuleWeb.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblModuleWeb.Location = new System.Drawing.Point(592, 10);
+            this.lblModuleWeb.Name = "lblModuleWeb";
+            this.lblModuleWeb.Size = new System.Drawing.Size(181, 15);
+            this.lblModuleWeb.TabIndex = 2;
+            this.lblModuleWeb.Text = "www.belgiumcampus.ac.za";
+            this.lblModuleWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // MaroonPanelSign
             // 
@@ -93,23 +95,23 @@
             this.GoldPanelSign.Size = new System.Drawing.Size(1312, 20);
             this.GoldPanelSign.TabIndex = 2;
             // 
-            // groupBox1
+            // groupBoxCourseDetails
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gold;
-            this.groupBox1.Controls.Add(this.txtLink);
-            this.groupBox1.Controls.Add(this.txtDescription);
-            this.groupBox1.Controls.Add(this.txtCourseName);
-            this.groupBox1.Controls.Add(this.txtCourseID);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblDescription);
-            this.groupBox1.Controls.Add(this.lblCourseName);
-            this.groupBox1.Controls.Add(this.lblCourseID);
-            this.groupBox1.Location = new System.Drawing.Point(45, 70);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(348, 246);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Course Details";
+            this.groupBoxCourseDetails.BackColor = System.Drawing.Color.Gold;
+            this.groupBoxCourseDetails.Controls.Add(this.txtLink);
+            this.groupBoxCourseDetails.Controls.Add(this.txtDescription);
+            this.groupBoxCourseDetails.Controls.Add(this.txtCourseName);
+            this.groupBoxCourseDetails.Controls.Add(this.txtCourseID);
+            this.groupBoxCourseDetails.Controls.Add(this.label1);
+            this.groupBoxCourseDetails.Controls.Add(this.lblDescription);
+            this.groupBoxCourseDetails.Controls.Add(this.lblCourseName);
+            this.groupBoxCourseDetails.Controls.Add(this.lblCourseID);
+            this.groupBoxCourseDetails.Location = new System.Drawing.Point(45, 70);
+            this.groupBoxCourseDetails.Name = "groupBoxCourseDetails";
+            this.groupBoxCourseDetails.Size = new System.Drawing.Size(348, 246);
+            this.groupBoxCourseDetails.TabIndex = 3;
+            this.groupBoxCourseDetails.TabStop = false;
+            this.groupBoxCourseDetails.Text = "Course Details";
             // 
             // txtLink
             // 
@@ -269,11 +271,21 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // picBoxModule
+            // 
+            this.picBoxModule.Image = ((System.Drawing.Image)(resources.GetObject("picBoxModule.Image")));
+            this.picBoxModule.Location = new System.Drawing.Point(-1, 4);
+            this.picBoxModule.Name = "picBoxModule";
+            this.picBoxModule.Size = new System.Drawing.Size(106, 56);
+            this.picBoxModule.TabIndex = 11;
+            this.picBoxModule.TabStop = false;
+            // 
             // ModuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1310, 458);
+            this.Controls.Add(this.picBoxModule);
             this.Controls.Add(this.lblSearchCourseID);
             this.Controls.Add(this.txtSearchCourseID);
             this.Controls.Add(this.btnBack);
@@ -282,7 +294,7 @@
             this.Controls.Add(this.btnRemoveCourse);
             this.Controls.Add(this.btnInsertCourse);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxCourseDetails);
             this.Controls.Add(this.GoldPanelSign);
             this.Controls.Add(this.MaroonPanelSign);
             this.Controls.Add(this.BlackPanelSign);
@@ -291,9 +303,10 @@
             this.Load += new System.EventHandler(this.ModuleForm_Load);
             this.BlackPanelSign.ResumeLayout(false);
             this.BlackPanelSign.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxCourseDetails.ResumeLayout(false);
+            this.groupBoxCourseDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxModule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,10 +315,10 @@
         #endregion
 
         private System.Windows.Forms.Panel BlackPanelSign;
-        private System.Windows.Forms.Label lblLoginWeb;
+        private System.Windows.Forms.Label lblModuleWeb;
         private System.Windows.Forms.Panel MaroonPanelSign;
         private System.Windows.Forms.Panel GoldPanelSign;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxCourseDetails;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnInsertCourse;
         private System.Windows.Forms.Button btnRemoveCourse;
@@ -322,5 +335,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtLink;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picBoxModule;
     }
 }
