@@ -42,10 +42,7 @@ namespace PRG_282_Project
 
                     handler.write(username, pass, list);
                     MessageBox.Show("Account successfully created");
-                    Login form1 = new Login();
-                    SignUp form2 = new SignUp();
-                    form2.Hide();
-                    form1.ShowDialog();
+                    
 
                 }
 

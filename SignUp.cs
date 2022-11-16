@@ -29,6 +29,9 @@ namespace PRG_282_Project
             {
                 User user = new User();
                 user.Signup(txtUsername.Text, txtConfirm.Text, txtPassword.Text, signUpList);
+                Login login = new Login();
+                login.Show();
+                this.Hide();
             }
 
 

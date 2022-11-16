@@ -72,10 +72,19 @@ namespace PRG_282_Project
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to delete item", "Remove Row", MessageBoxButtons.YesNo) == DialogResult.Yes) // confim if the use wants to delete the lecturer
-            {                
-                string query = "DELETE FROM Lectures WHERE  EmpID = " + txtID.Text; // sql command to delete lecturer
-                handler.DML_procedures(query);
-                CloseForm();
+            {
+                try
+                {
+                    string query = "DELETE FROM Lectures WHERE  EmpID = " + txtID.Text; // sql command to delete lecturer
+                    handler.DML_procedures(query);
+                    CloseForm();
+                }
+                catch (System.Data.SqlClient.SqlException)
+                {
+
+                    MessageBox.Show("Slected row has no ID value please insert values into the selected row before deletion");
+                }
+                
             }
             
         }
