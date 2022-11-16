@@ -30,8 +30,16 @@ namespace PRG_282_Project
 
         private void ModuleForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = handler.readData(getModules);
-            dataGridView1.AutoResizeColumns();
+            try
+            {
+                dataGridView1.DataSource = handler.readData(getModules);
+                dataGridView1.AutoResizeColumns();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)

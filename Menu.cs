@@ -21,9 +21,18 @@ namespace PRG_282_Project
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-            //Upon the menu loading the query is executed and datagridview is populated 
-            string query = @"EXEC StudentsPerLecturer";
-            dataGridViewLecturers.DataSource = handler.readData(query);
+            //Upon the menu loading the query is executed and datagridview is populated
+
+            try
+            {
+                string query = @"EXEC StudentsPerLecturer";
+                dataGridViewLecturers.DataSource = handler.readData(query);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);    
+            }
+
         }
         //Upon clicking the exit button the following event is executed 
         private void btnExit_Click(object sender, EventArgs e)

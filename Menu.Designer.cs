@@ -185,7 +185,7 @@
             this.btnInsertLectures.Name = "btnInsertLectures";
             this.btnInsertLectures.Size = new System.Drawing.Size(340, 55);
             this.btnInsertLectures.TabIndex = 11;
-            this.btnInsertLectures.Text = "Insert";
+            this.btnInsertLectures.Text = "Insert or Delete";
             this.btnInsertLectures.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInsertLectures.UseVisualStyleBackColor = false;
             this.btnInsertLectures.Click += new System.EventHandler(this.btnInsertLectures_Click);

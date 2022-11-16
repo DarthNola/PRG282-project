@@ -44,9 +44,9 @@
             this.picBoxLecturer = new System.Windows.Forms.PictureBox();
             this.groupBoxLecturer = new System.Windows.Forms.GroupBox();
             this.BlackPanelLecturer = new System.Windows.Forms.Panel();
+            this.lblLecturerWeb = new System.Windows.Forms.Label();
             this.MaroonPanelLecturer = new System.Windows.Forms.Panel();
             this.GoldPanelLecturer = new System.Windows.Forms.Panel();
-            this.lblLecturerWeb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLecturer)).BeginInit();
             this.groupBoxLecturer.SuspendLayout();
             this.BlackPanelLecturer.SuspendLayout();
@@ -110,7 +110,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(133, 34);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(144, 20);
             this.txtID.TabIndex = 5;
@@ -118,7 +118,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(133, 80);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(144, 20);
             this.txtName.TabIndex = 6;
@@ -126,7 +126,7 @@
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(133, 123);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(144, 20);
             this.txtSurname.TabIndex = 7;
@@ -134,7 +134,7 @@
             // txtModuleCode
             // 
             this.txtModuleCode.Location = new System.Drawing.Point(133, 164);
-            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtModuleCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtModuleCode.Name = "txtModuleCode";
             this.txtModuleCode.Size = new System.Drawing.Size(144, 20);
             this.txtModuleCode.TabIndex = 8;
@@ -145,19 +145,20 @@
             this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBack.Location = new System.Drawing.Point(434, 5);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(82, 40);
             this.btnBack.TabIndex = 9;
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Maroon;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(323, 279);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(160, 297);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(74, 40);
             this.btnAdd.TabIndex = 10;
@@ -170,8 +171,8 @@
             this.btnDelete.BackColor = System.Drawing.Color.Maroon;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(183, 279);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(248, 297);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(74, 40);
             this.btnDelete.TabIndex = 11;
@@ -215,6 +216,19 @@
             this.BlackPanelLecturer.Size = new System.Drawing.Size(531, 31);
             this.BlackPanelLecturer.TabIndex = 14;
             // 
+            // lblLecturerWeb
+            // 
+            this.lblLecturerWeb.AutoSize = true;
+            this.lblLecturerWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLecturerWeb.ForeColor = System.Drawing.Color.White;
+            this.lblLecturerWeb.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblLecturerWeb.Location = new System.Drawing.Point(175, 8);
+            this.lblLecturerWeb.Name = "lblLecturerWeb";
+            this.lblLecturerWeb.Size = new System.Drawing.Size(181, 15);
+            this.lblLecturerWeb.TabIndex = 3;
+            this.lblLecturerWeb.Text = "www.belgiumcampus.ac.za";
+            this.lblLecturerWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // MaroonPanelLecturer
             // 
             this.MaroonPanelLecturer.BackColor = System.Drawing.Color.Maroon;
@@ -231,19 +245,6 @@
             this.GoldPanelLecturer.Size = new System.Drawing.Size(531, 18);
             this.GoldPanelLecturer.TabIndex = 16;
             // 
-            // lblLecturerWeb
-            // 
-            this.lblLecturerWeb.AutoSize = true;
-            this.lblLecturerWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLecturerWeb.ForeColor = System.Drawing.Color.White;
-            this.lblLecturerWeb.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblLecturerWeb.Location = new System.Drawing.Point(175, 8);
-            this.lblLecturerWeb.Name = "lblLecturerWeb";
-            this.lblLecturerWeb.Size = new System.Drawing.Size(181, 15);
-            this.lblLecturerWeb.TabIndex = 3;
-            this.lblLecturerWeb.Text = "www.belgiumcampus.ac.za";
-            this.lblLecturerWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // insertlectures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +259,7 @@
             this.Controls.Add(this.picBoxLecturer);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "insertlectures";
             this.Text = "insertlectures";
             this.Load += new System.EventHandler(this.insertlectures_Load);

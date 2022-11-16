@@ -35,12 +35,20 @@ namespace PRG_282_Project
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-           picBoxStudentForm.Image = Image.FromFile("Logo.png");            
-           dataGridView1.DataSource =  handler.readData(getStudents);
-           handler.getModules(txtModule);
-           dataGridView1.ClearSelection();
-           dataGridView1.AutoResizeRows();
-           dataGridView1.AutoResizeColumns();
+            try
+            {
+                picBoxStudentForm.Image = Image.FromFile("Logo.png");
+                dataGridView1.DataSource = handler.readData(getStudents);
+                handler.getModules(txtModule);
+                dataGridView1.ClearSelection();
+                dataGridView1.AutoResizeRows();
+                dataGridView1.AutoResizeColumns();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);    
+            }
+          
         }
 
         // Items from selected dataGridView row to textboxes

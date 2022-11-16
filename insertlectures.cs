@@ -40,10 +40,8 @@ namespace PRG_282_Project
 
                      string query = "INSERT INTO Lectures values ('" + txtID.Text + "', '" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtModuleCode.Text + "')"; // insert sql command
                     handler.inserLecturers(query);
-                   
-                    Menu main = new Menu();
-                    main.Show();
-                    this.Hide();
+
+                    CloseForm();
 
                 }
                
@@ -74,17 +72,24 @@ namespace PRG_282_Project
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to delete item", "Remove Row", MessageBoxButtons.YesNo) == DialogResult.Yes) // confim if the use wants to delete the lecturer
-            {
-                
+            {                
                 string query = "DELETE FROM Lectures WHERE  EmpID = " + txtID.Text; // sql command to delete lecturer
                 handler.DML_procedures(query);
-
-                Menu main = new Menu();
-                main.Show();    //open the old form
-                this.Hide();
-
+                CloseForm();
             }
             
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        public void CloseForm()
+        {
+            Menu main = new Menu();
+            main.Show();    //open the old form
+            this.Hide();
         }
     }
 }
