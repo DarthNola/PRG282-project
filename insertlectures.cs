@@ -31,14 +31,14 @@ namespace PRG_282_Project
             
             try
             {
-                 if (txtID.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtModuleCode.Text =="")
+                 if (txtID.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtModuleCode.Text =="") // textbox should not be empty
                  {
                      MessageBox.Show("Please fill in all textboxes!");
                  }
                  else
                  {
 
-                     string query = "INSERT INTO Lectures values ('" + txtID.Text + "', '" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtModuleCode.Text + "')";
+                     string query = "INSERT INTO Lectures values ('" + txtID.Text + "', '" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtModuleCode.Text + "')"; // insert sql command
                     handler.inserLecturers(query);
                    
                     Menu main = new Menu();
@@ -60,10 +60,10 @@ namespace PRG_282_Project
         private void insertlectures_Load(object sender, EventArgs e)
         {
             List<string> list = new List<string>();
-            list = fileHandler.readlectures();
+            list = fileHandler.readlectures();//getting the value from the text to the list
             foreach (string item in list)
             {
-                string[] items = item.Split(',');
+                string[] items = item.Split(','); //spliting the string to get specific value that we are looking for each textbox
                 txtID.Text = items[0];
                 txtName.Text = items[1];
                 txtSurname.Text = items[2];
@@ -73,14 +73,14 @@ namespace PRG_282_Project
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to delete item", "Remove Row", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to delete item", "Remove Row", MessageBoxButtons.YesNo) == DialogResult.Yes) // confim if the use wants to delete the lecturer
             {
                 
-                string query = "DELETE FROM Lectures WHERE  EmpID = " + txtID.Text;
+                string query = "DELETE FROM Lectures WHERE  EmpID = " + txtID.Text; // sql command to delete lecturer
                 handler.DML_procedures(query);
 
                 Menu main = new Menu();
-                main.Show();
+                main.Show();    //open the old form
                 this.Hide();
 
             }

@@ -99,16 +99,16 @@ namespace PRG_282_Project
 
 
             string mytext = id + "," + namez + "," + surname + "," + modulecode;
-            File.WriteAllText(path, mytext);
+            File.WriteAllText(path, mytext); // writing a single line to a text file and when is new data it will overwrite the text file
 
         }
 
 
         public List<string> readlectures()
         {
-            string path = @"Lecture.txt";
-            List<string> mylist = File.ReadAllLines(path).ToList();
-            //Loop to check if username entered is found in the list
+            string path = @"Lecture.txt";// file path
+            List<string> mylist = File.ReadAllLines(path).ToList(); // taking what is read puting it to a list
+           
             return mylist;
 
 

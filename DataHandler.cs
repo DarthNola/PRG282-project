@@ -131,7 +131,7 @@ namespace PRG_282_Project
             }
             con.Close();
         }
-        public void inserLecturers(string query)
+        public void inserLecturers(string query)// inserting into the lecturer table
         {
             try
             {
