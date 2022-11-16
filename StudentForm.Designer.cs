@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReturn = new System.Windows.Forms.Button();
             this.picBoxStudentForm = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxMainDetail = new System.Windows.Forms.GroupBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxMoreInfo = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtModule = new System.Windows.Forms.ComboBox();
             this.txtGender = new System.Windows.Forms.ComboBox();
@@ -61,13 +61,13 @@
             this.GoldPanelStudent = new System.Windows.Forms.Panel();
             this.MaroonPanelStudent = new System.Windows.Forms.Panel();
             this.BlackPanelStudent = new System.Windows.Forms.Panel();
-            this.lblMenuWeb = new System.Windows.Forms.Label();
+            this.lblStudentWeb = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnLoadImage = new System.Windows.Forms.Button();
             this.lblSearchStudentID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxMainDetail.SuspendLayout();
+            this.groupBoxMoreInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.BlackPanelStudent.SuspendLayout();
             this.SuspendLayout();
@@ -95,22 +95,22 @@
             this.picBoxStudentForm.TabIndex = 1;
             this.picBoxStudentForm.TabStop = false;
             // 
-            // groupBox1
+            // groupBoxMainDetail
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gold;
-            this.groupBox1.Controls.Add(this.txtSurname);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(196, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 171);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Main Details";
+            this.groupBoxMainDetail.BackColor = System.Drawing.Color.Gold;
+            this.groupBoxMainDetail.Controls.Add(this.txtSurname);
+            this.groupBoxMainDetail.Controls.Add(this.txtName);
+            this.groupBoxMainDetail.Controls.Add(this.txtID);
+            this.groupBoxMainDetail.Controls.Add(this.label3);
+            this.groupBoxMainDetail.Controls.Add(this.label2);
+            this.groupBoxMainDetail.Controls.Add(this.label1);
+            this.groupBoxMainDetail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBoxMainDetail.Location = new System.Drawing.Point(196, 72);
+            this.groupBoxMainDetail.Name = "groupBoxMainDetail";
+            this.groupBoxMainDetail.Size = new System.Drawing.Size(313, 171);
+            this.groupBoxMainDetail.TabIndex = 2;
+            this.groupBoxMainDetail.TabStop = false;
+            this.groupBoxMainDetail.Text = "Main Details";
             // 
             // txtSurname
             // 
@@ -163,27 +163,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student ID:";
             // 
-            // groupBox2
+            // groupBoxMoreInfo
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Gold;
-            this.groupBox2.Controls.Add(this.btnClear);
-            this.groupBox2.Controls.Add(this.txtModule);
-            this.groupBox2.Controls.Add(this.txtGender);
-            this.groupBox2.Controls.Add(this.txtPhone);
-            this.groupBox2.Controls.Add(this.txtDOB);
-            this.groupBox2.Controls.Add(this.txtAddress);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Location = new System.Drawing.Point(555, 48);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(565, 216);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "More Info";
+            this.groupBoxMoreInfo.BackColor = System.Drawing.Color.Gold;
+            this.groupBoxMoreInfo.Controls.Add(this.btnClear);
+            this.groupBoxMoreInfo.Controls.Add(this.txtModule);
+            this.groupBoxMoreInfo.Controls.Add(this.txtGender);
+            this.groupBoxMoreInfo.Controls.Add(this.txtPhone);
+            this.groupBoxMoreInfo.Controls.Add(this.txtDOB);
+            this.groupBoxMoreInfo.Controls.Add(this.txtAddress);
+            this.groupBoxMoreInfo.Controls.Add(this.label7);
+            this.groupBoxMoreInfo.Controls.Add(this.label8);
+            this.groupBoxMoreInfo.Controls.Add(this.label6);
+            this.groupBoxMoreInfo.Controls.Add(this.label5);
+            this.groupBoxMoreInfo.Controls.Add(this.label4);
+            this.groupBoxMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBoxMoreInfo.Location = new System.Drawing.Point(555, 48);
+            this.groupBoxMoreInfo.Name = "groupBoxMoreInfo";
+            this.groupBoxMoreInfo.Size = new System.Drawing.Size(565, 216);
+            this.groupBoxMoreInfo.TabIndex = 2;
+            this.groupBoxMoreInfo.TabStop = false;
+            this.groupBoxMoreInfo.Text = "More Info";
             // 
             // btnClear
             // 
@@ -294,14 +294,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(196, 329);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -389,23 +389,23 @@
             // BlackPanelStudent
             // 
             this.BlackPanelStudent.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BlackPanelStudent.Controls.Add(this.lblMenuWeb);
+            this.BlackPanelStudent.Controls.Add(this.lblStudentWeb);
             this.BlackPanelStudent.Location = new System.Drawing.Point(-7, 699);
             this.BlackPanelStudent.Name = "BlackPanelStudent";
             this.BlackPanelStudent.Size = new System.Drawing.Size(1383, 31);
             this.BlackPanelStudent.TabIndex = 4;
             // 
-            // lblMenuWeb
+            // lblStudentWeb
             // 
-            this.lblMenuWeb.AutoSize = true;
-            this.lblMenuWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuWeb.ForeColor = System.Drawing.Color.White;
-            this.lblMenuWeb.Location = new System.Drawing.Point(601, 8);
-            this.lblMenuWeb.Name = "lblMenuWeb";
-            this.lblMenuWeb.Size = new System.Drawing.Size(181, 15);
-            this.lblMenuWeb.TabIndex = 1;
-            this.lblMenuWeb.Text = "www.belgiumcampus.ac.za";
-            this.lblMenuWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblStudentWeb.AutoSize = true;
+            this.lblStudentWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentWeb.ForeColor = System.Drawing.Color.White;
+            this.lblStudentWeb.Location = new System.Drawing.Point(601, 8);
+            this.lblStudentWeb.Name = "lblStudentWeb";
+            this.lblStudentWeb.Size = new System.Drawing.Size(181, 15);
+            this.lblStudentWeb.TabIndex = 1;
+            this.lblStudentWeb.Text = "www.belgiumcampus.ac.za";
+            this.lblStudentWeb.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // contextMenuStrip1
             // 
@@ -448,9 +448,9 @@
             this.Controls.Add(this.MaroonPanelStudent);
             this.Controls.Add(this.GoldPanelStudent);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxMoreInfo);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxMainDetail);
             this.Controls.Add(this.picBoxStudentForm);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnRemove);
@@ -461,10 +461,10 @@
             this.Text = "StudentForm";
             this.Load += new System.EventHandler(this.StudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxStudentForm)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxMainDetail.ResumeLayout(false);
+            this.groupBoxMainDetail.PerformLayout();
+            this.groupBoxMoreInfo.ResumeLayout(false);
+            this.groupBoxMoreInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.BlackPanelStudent.ResumeLayout(false);
             this.BlackPanelStudent.PerformLayout();
@@ -477,14 +477,14 @@
 
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.PictureBox picBoxStudentForm;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxMainDetail;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxMoreInfo;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -500,7 +500,7 @@
         private System.Windows.Forms.Panel GoldPanelStudent;
         private System.Windows.Forms.Panel MaroonPanelStudent;
         private System.Windows.Forms.Panel BlackPanelStudent;
-        private System.Windows.Forms.Label lblMenuWeb;
+        private System.Windows.Forms.Label lblStudentWeb;
         private System.Windows.Forms.DateTimePicker txtDOB;
         private System.Windows.Forms.MaskedTextBox txtPhone;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
