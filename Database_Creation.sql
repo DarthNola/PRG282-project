@@ -57,11 +57,13 @@ GO
 CREATE PROCEDURE StudentsPerLecturer
 AS
 BEGIN
-SELECT Lectures.EmpID, Lectures.Name, Lectures.Surname, Lectures.Class_Module, count(STUDENTS.Module_Code) AS 'Number of Students per Lecturer'
+SELECT Lectures.EmpID, Lectures.Name, Lectures.Surname, Codes.Module_Code, count(STUDENTS.Module_Code) AS 'Number of Students per Lecturer'
 FROM Lectures
-LEFT JOIN STUDENTS
+FULL OUTER JOIN STUDENTS
 ON Lectures.Class_Module = STUDENTS.Module_Code
-Group By Lectures.EmpID, Lectures.Name, Lectures.Surname, Lectures.Class_Module;
+Right JOIN Codes
+ON Lectures.Class_Module = Codes.Module_Code
+Group By Lectures.EmpID, Lectures.Name, Lectures.Surname, Codes.Module_Code;
 END
 GO
 CREATE PROCEDURE spModules
