@@ -175,5 +175,19 @@ namespace PRG_282_Project
         {           
             handler.Load_Image(txtID.Text, this.dataGridView1);
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            //clear
+            txtAddress.Text = "";
+            txtDOB.Text = "";
+            txtGender.Text = "";
+            txtID.Text = "";
+            txtModule.Text = "";
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtSearch.Text = "";
+            txtSurname.Text = "";
+        }
     }
 }

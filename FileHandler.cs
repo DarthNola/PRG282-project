@@ -89,8 +89,32 @@ namespace PRG_282_Project
             mylist.Add(username + "," + password);
             File.WriteAllLines(filePath, mylist);
         }
+        //This method writes  to lecture filpath
 
-       
+        public void writelecturese(string id, string namez, string surname, string modulecode)
+        {
+            string path = @"Lecture.txt";
+
+
+
+
+            string mytext = id + "," + namez + "," + surname + "," + modulecode;
+            File.WriteAllText(path, mytext);
+
+        }
+
+
+        public List<string> readlectures()
+        {
+            string path = @"Lecture.txt";
+            List<string> mylist = File.ReadAllLines(path).ToList();
+            //Loop to check if username entered is found in the list
+            return mylist;
+
+
+        }
+
+
 
     }
 }

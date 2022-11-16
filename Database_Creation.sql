@@ -69,3 +69,5 @@ AS
 BEGIN
 SELECT Module_Code FROM Codes;
 END;
+Go 
+Execute StudentsPerLecturer

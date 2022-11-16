@@ -14,6 +14,7 @@ namespace PRG_282_Project
     {
         //Instance of the DataHandler class is created 
         DataHandler handler = new DataHandler();
+        FileHandler fileHandler = new FileHandler();
         public Menu()
         {
             InitializeComponent();
@@ -47,6 +48,32 @@ namespace PRG_282_Project
             ModuleForm M_Form = new ModuleForm();
             M_Form.Show();
             this.Hide();
+        }
+
+        private void btnInsertLectures_Click(object sender, EventArgs e)
+        {
+
+            insertlectures form1 = new insertlectures();
+            form1.Show();
+        }
+
+        private void dataGridViewLecturers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dvgRow = dataGridViewLecturers.Rows[e.RowIndex];
+
+                fileHandler.writelecturese(
+                  dvgRow.Cells[0].Value.ToString(),
+                   dvgRow.Cells[1].Value.ToString(),
+                    dvgRow.Cells[2].Value.ToString(),
+                 dvgRow.Cells[3].Value.ToString()
+                 );
+
+
+
+            }
         }
     }
 }
