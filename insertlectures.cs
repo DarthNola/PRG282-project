@@ -29,8 +29,8 @@ namespace PRG_282_Project
         {
 
             
-             try
-             {
+            try
+            {
                  if (txtID.Text == "" || txtName.Text == "" || txtSurname.Text == "" || txtModuleCode.Text =="")
                  {
                      MessageBox.Show("Please fill in all textboxes!");
@@ -39,14 +39,15 @@ namespace PRG_282_Project
                  {
 
                      string query = "INSERT INTO Lectures values ('" + txtID.Text + "', '" + txtName.Text + "', '" + txtSurname.Text + "', '" + txtModuleCode.Text + "')";
-                    handler.DML_procedures(query);
-                    MessageBox.Show("Successsfully added lecturer");
+                    handler.inserLecturers(query);
+                   
                     Menu main = new Menu();
                     main.Show();
                     this.Hide();
 
                 }
-             }
+               
+            }
              catch (Exception ex)
              {
                  MessageBox.Show(ex.Message);

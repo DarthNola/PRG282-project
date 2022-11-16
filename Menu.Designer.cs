@@ -54,7 +54,7 @@
             this.btnModuleForm.ForeColor = System.Drawing.Color.White;
             this.btnModuleForm.Image = ((System.Drawing.Image)(resources.GetObject("btnModuleForm.Image")));
             this.btnModuleForm.Location = new System.Drawing.Point(465, 508);
-            this.btnModuleForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModuleForm.Margin = new System.Windows.Forms.Padding(4);
             this.btnModuleForm.Name = "btnModuleForm";
             this.btnModuleForm.Size = new System.Drawing.Size(425, 68);
             this.btnModuleForm.TabIndex = 1;
@@ -71,7 +71,7 @@
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExit.Location = new System.Drawing.Point(1224, 20);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(168, 69);
             this.btnExit.TabIndex = 2;
@@ -85,7 +85,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.lblMenuWeb);
             this.panel1.Location = new System.Drawing.Point(-1, 693);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1407, 48);
             this.panel1.TabIndex = 3;
@@ -107,7 +107,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Location = new System.Drawing.Point(-1, 682);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1407, 23);
             this.panel2.TabIndex = 4;
@@ -116,7 +116,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Gold;
             this.panel3.Location = new System.Drawing.Point(-1, 665);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1407, 21);
             this.panel3.TabIndex = 5;
@@ -141,7 +141,7 @@
             this.btnStudentForm.Image = ((System.Drawing.Image)(resources.GetObject("btnStudentForm.Image")));
             this.btnStudentForm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStudentForm.Location = new System.Drawing.Point(33, 506);
-            this.btnStudentForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStudentForm.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudentForm.Name = "btnStudentForm";
             this.btnStudentForm.Size = new System.Drawing.Size(424, 70);
             this.btnStudentForm.TabIndex = 8;
@@ -154,7 +154,7 @@
             // 
             this.picBoxMenu.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMenu.Image")));
             this.picBoxMenu.Location = new System.Drawing.Point(16, 15);
-            this.picBoxMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBoxMenu.Margin = new System.Windows.Forms.Padding(4);
             this.picBoxMenu.Name = "picBoxMenu";
             this.picBoxMenu.Size = new System.Drawing.Size(136, 74);
             this.picBoxMenu.TabIndex = 9;
@@ -165,9 +165,9 @@
             this.groupBoxLecturers.BackColor = System.Drawing.Color.Gold;
             this.groupBoxLecturers.Controls.Add(this.dataGridViewLecturers);
             this.groupBoxLecturers.Location = new System.Drawing.Point(285, 111);
-            this.groupBoxLecturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxLecturers.Name = "groupBoxLecturers";
-            this.groupBoxLecturers.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxLecturers.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxLecturers.Size = new System.Drawing.Size(823, 370);
             this.groupBoxLecturers.TabIndex = 10;
             this.groupBoxLecturers.TabStop = false;
@@ -177,9 +177,10 @@
             // 
             this.dataGridViewLecturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLecturers.Location = new System.Drawing.Point(44, 23);
-            this.dataGridViewLecturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLecturers.Name = "dataGridViewLecturers";
             this.dataGridViewLecturers.RowHeadersWidth = 51;
+            this.dataGridViewLecturers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewLecturers.Size = new System.Drawing.Size(731, 327);
             this.dataGridViewLecturers.TabIndex = 0;
             this.dataGridViewLecturers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLecturers_CellClick);
@@ -215,7 +216,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnModuleForm);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);

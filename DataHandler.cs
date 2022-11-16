@@ -131,6 +131,27 @@ namespace PRG_282_Project
             }
             con.Close();
         }
+        public void inserLecturers(string query)
+        {
+            try
+            {
+                string qry = query;
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successsfully added lecturer");
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("Module does not exsist");
+
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
 
 
     }
