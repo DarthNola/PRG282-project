@@ -66,6 +66,11 @@ namespace PRG_282_Project
                     dataGridView1.DataSource = handler.readData(getModules);
                 }
             }
+            catch(System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("Course already exists.Please choose a different Module Code");
+                handler.CloseConnection();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

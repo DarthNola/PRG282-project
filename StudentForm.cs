@@ -131,13 +131,19 @@ namespace PRG_282_Project
                     handler.DML_procedures(query);
                     dataGridView1.DataSource = handler.readData(getStudents);
                 }
+        }
+            catch(System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("Student already exists.Please enter a different ID");
+                handler.CloseConnection();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 handler.CloseConnection();
             }
-            dataGridView1.AutoResizeRows();
+
+    dataGridView1.AutoResizeRows();
 
 
         }
@@ -180,13 +186,17 @@ namespace PRG_282_Project
         // Insert an image
 
         private void btnLoadImage_Click(object sender, EventArgs e)
-        {           
-            handler.Load_Image(txtID.Text, this.dataGridView1);
+        {            
+            handler.Load_Image(txtID.Text, this.dataGridView1);           
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             //clear
+            dataGridView1.DataSource = handler.readData(getStudents);
+            dataGridView1.AutoResizeRows();
+            dataGridView1.AutoResizeColumns();
+
             txtAddress.Text = "";
             txtDOB.Text = "";
             txtGender.Text = "";

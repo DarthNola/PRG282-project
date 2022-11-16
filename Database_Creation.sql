@@ -5,7 +5,7 @@ GO
 CREATE TABLE Codes
 (
 Module_Code Char(10) PRIMARY KEY,
-Module_Name VarChar(30) UNIQUE,
+Module_Name VarChar(30),
 Description VarChar(50),
 Source_Link VarChar(2084)
 );
@@ -71,5 +71,5 @@ AS
 BEGIN
 SELECT Module_Code FROM Codes;
 END;
-Go 
-Execute StudentsPerLecturer
+ 
+

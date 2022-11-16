@@ -54,22 +54,12 @@ namespace PRG_282_Project
         //Method for Update, Delete and Insert into Student_Details database
 
         public void DML_procedures(string query)
-        {
-            try
-            {
+        {            
                 string qry = query;
                 SqlCommand cmd = new SqlCommand(query, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
+                con.Close();            
 
         }
 
@@ -86,6 +76,8 @@ namespace PRG_282_Project
                 Image_Path = picPath;
             }
 
+            if(Image_Path != "")
+            {
             byte[] imageBt = null;
             FileStream fstream = new FileStream(Image_Path, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fstream);
@@ -93,28 +85,29 @@ namespace PRG_282_Project
             string qry = @"UPDATE STUDENTS SET ST_Image =" + "@IMG \n WHERE StudentID= " + ID;
             SqlCommand cmd = new SqlCommand(qry, con);
             SqlDataReader reader;
-            if (ID != "")
-            {
-                try
+                if (ID != "")
                 {
-                    con.Open();
-                    cmd.Parameters.Add(new SqlParameter("@IMG", imageBt));
-                    reader = cmd.ExecuteReader();
-                    MessageBox.Show("Inserted image");
-                    con.Close();
-                    Image_Path = "";
-                    dgv.DataSource = readData("SELECT * FROM Students");
+                    try
+                    {
+                        con.Open();
+                        cmd.Parameters.Add(new SqlParameter("@IMG", imageBt));
+                        reader = cmd.ExecuteReader();
+                        MessageBox.Show("Inserted image");
+                        con.Close();
+                        Image_Path = "";
+                        dgv.DataSource = readData("SELECT * FROM Students");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Please select a item in Data Grid");
                 }
+                dgv.AutoResizeRows();
             }
-            else
-            {
-                MessageBox.Show("Please select a item in Data Grid");
-            }
-            dgv.AutoResizeRows();
         }
 
         public void getModules(ComboBox box)

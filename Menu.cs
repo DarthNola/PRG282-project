@@ -64,6 +64,7 @@ namespace PRG_282_Project
 
             insertlectures form1 = new insertlectures();
             form1.Show();
+            this.Hide();
         }
 
         private void dataGridViewLecturers_CellClick(object sender, DataGridViewCellEventArgs e)
