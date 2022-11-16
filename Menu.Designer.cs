@@ -176,12 +176,14 @@
             // btnInsertLectures
             // 
             this.btnInsertLectures.BackColor = System.Drawing.Color.Maroon;
+            this.btnInsertLectures.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnInsertLectures.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertLectures.ForeColor = System.Drawing.Color.White;
+            this.btnInsertLectures.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertLectures.Image")));
             this.btnInsertLectures.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnInsertLectures.Location = new System.Drawing.Point(674, 413);
             this.btnInsertLectures.Name = "btnInsertLectures";
-            this.btnInsertLectures.Size = new System.Drawing.Size(340, 56);
+            this.btnInsertLectures.Size = new System.Drawing.Size(340, 55);
             this.btnInsertLectures.TabIndex = 11;
             this.btnInsertLectures.Text = "Insert";
             this.btnInsertLectures.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
