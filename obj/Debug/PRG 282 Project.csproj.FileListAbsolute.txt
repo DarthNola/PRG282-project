@@ -85,3 +85,28 @@ C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\o
 C:\Users\georg\Dropbox\My PC (LAPTOP-HCES2NO9)\Documents\GitHub\PRG282-project\obj\Debug\PRG 282 Project.csproj.CopyComplete
 C:\Users\Vuyo\Documents\GitHub\PRG282-project\obj\Debug\PRG_282_Project.insertlectures.resources
 C:\PRG282-project\obj\Debug\PRG_282_Project.insertlectures.resources
+D:\PRG282-project\obj\Debug\PRG 282 Project.csproj.AssemblyReference.cache
+D:\PRG282-project\obj\Debug\PRG 282 Project.csproj.SuggestedBindingRedirects.cache
+D:\PRG282-project\obj\Debug\PRG_282_Project.insertlectures.resources
+D:\PRG282-project\obj\Debug\PRG_282_Project.Login.resources
+D:\PRG282-project\obj\Debug\PRG_282_Project.Menu.resources
+D:\PRG282-project\obj\Debug\PRG_282_Project.ModuleForm.resources
+D:\PRG282-project\obj\Debug\PRG_282_Project.Properties.Resources.resources
+D:\PRG282-project\obj\Debug\PRG_282_Project.SignUp.resources
+D:\PRG282-project\obj\Debug\PRG_282_Project.StudentForm.resources
+D:\PRG282-project\obj\Debug\PRG 282 Project.csproj.GenerateResource.cache
+D:\PRG282-project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
+D:\PRG282-project\obj\Debug\PRG 282 Project.exe
+D:\PRG282-project\obj\Debug\PRG 282 Project.pdb
+D:\PRG282-project\bin\Debug\PRG 282 Project.exe.config
+D:\PRG282-project\bin\Debug\PRG 282 Project.exe
+D:\PRG282-project\bin\Debug\PRG 282 Project.pdb
+D:\PRG282-project\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\PRG282-project\bin\Debug\System.Security.AccessControl.dll
+D:\PRG282-project\bin\Debug\System.Security.Permissions.dll
+D:\PRG282-project\bin\Debug\System.Security.Principal.Windows.dll
+D:\PRG282-project\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\PRG282-project\bin\Debug\System.Security.AccessControl.xml
+D:\PRG282-project\bin\Debug\System.Security.Permissions.xml
+D:\PRG282-project\bin\Debug\System.Security.Principal.Windows.xml
+D:\PRG282-project\obj\Debug\PRG 282 Project.csproj.CopyComplete
